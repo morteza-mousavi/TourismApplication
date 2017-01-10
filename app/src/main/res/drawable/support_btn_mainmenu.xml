@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <bitmap android:gravity="fill" android:scaleType="fitCenter" android:src="@drawable/support_activate" android:tileMode="disabled" />
+            </item>
+
+        </layer-list>
+    </item>
+
+    <item android:state_enabled="true">
+        <layer-list>
+            <item>
+                <bitmap android:gravity="fill" android:scaleType="fitCenter" android:src="@drawable/support" android:tileMode="disabled" />
+            </item>
+
+
+        </layer-list>
+    </item>
+</selector>

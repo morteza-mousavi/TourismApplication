@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TourismApplication</string>
+    <string name="MainMenu_Support">Support</string>
+    <string name="MainMenu_Singin">Login</string>
+    <string name="MainMenu_MainPage">Main Page</string>
+    <string name="MainMenu_Favorite">Favorite</string>
+    <string name="MainMenu_AboutUs">About Us</string>
+    <string name="MainMenu_Profile">Profile</string>
 </resources>
