@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context="ir.reserveiran.mobile.tourismapplication.HotelSearch">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:hint="تاريخ ورود را وارد كنيد"
+        android:id="@+id/TxtFromDate"
+
+        android:background="@drawable/textview_public"
+        />
+
 </RelativeLayout>

@@ -6,4 +6,5 @@
     <string name="MainMenu_Favorite">Favorite</string>
     <string name="MainMenu_AboutUs">About Us</string>
     <string name="MainMenu_Profile">Profile</string>
+    <string name="search_hint">search hint</string>
 </resources>
