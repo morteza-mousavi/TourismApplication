@@ -4,16 +4,14 @@
         <layer-list>
             <item>
                 <bitmap android:gravity="fill"
-                    android:src="@drawable/train_active"
+                    android:src="@drawable/train__active"
                     android:tileMode="disabled"
                     android:scaleType="fitCenter"
                     />
             </item>
-            <item>
-                <shape android:shape="oval">
+            <shape android:shape="oval">
 
-                </shape>
-            </item>
+            </shape>
         </layer-list>
     </item>
 
@@ -26,11 +24,9 @@
                     android:scaleType="fitCenter"
                     />
             </item>
-            <item>
-                <shape android:shape="oval">
+            <shape android:shape="oval">
 
-                </shape>
-            </item>
+            </shape>
         </layer-list>
     </item>
 </selector>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <bitmap android:gravity="fill"
+                    android:src="@drawable/bus_active"
+                    android:tileMode="disabled"
+                    android:scaleType="fitCenter"
+                    />
+            </item>
+            <shape android:shape="oval">
+
+            </shape>
+        </layer-list>
+    </item>
+
+    <item android:state_enabled="true">
+        <layer-list>
+            <item>
+                <bitmap android:gravity="fill"
+                    android:src="@drawable/bus"
+                    android:tileMode="disabled"
+                    android:scaleType="fitCenter"
+                    />
+            </item>
+            <shape android:shape="oval">
+
+            </shape>
+        </layer-list>
+    </item>
+</selector>
