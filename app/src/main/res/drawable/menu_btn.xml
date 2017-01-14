@@ -3,7 +3,7 @@
     <item android:state_pressed="true">
         <layer-list>
             <item>
-                <bitmap android:gravity="fill" android:scaleType="fitCenter" android:src="@drawable/menu" android:tileMode="disabled" />
+                <bitmap android:gravity="fill" android:scaleType="fitCenter" android:src="@drawable/menu_active" android:tileMode="disabled" />
             </item>
 
         </layer-list>
