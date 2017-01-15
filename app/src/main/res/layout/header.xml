@@ -5,49 +5,49 @@
     android:orientation="horizontal">
 
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1">
 
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <Button
+        <Button
+            android:id="@+id/header_alarm"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/alarm_btn" />
 
-                android:layout_gravity="center"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/alarm_btn" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_weight="8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <Button
-
-                android:layout_gravity="center"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/search_btn" />
-        </LinearLayout>
+    </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <Button
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="8">
 
-                android:layout_gravity="center"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/menu_btn" />
+        <Button
+            android:id="@+id/header_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/search_btn" />
+    </LinearLayout>
 
-        </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
+        <Button
+            android:id="@+id/header_manu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_btn" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

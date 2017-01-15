@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/TourismApplication.iml" filepath="$PROJECT_DIR$/TourismApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/hijriCalendarLibrary/hijriCalendarLibrary.iml" filepath="$PROJECT_DIR$/hijriCalendarLibrary/hijriCalendarLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hijriCalendarLibrary/hijriCalendarLibrary.iml" filepath="$PROJECT_DIR$/hijriCalendarLibrary/hijriCalendarLibrary.iml" />
     </modules>
   </component>
 </project>
