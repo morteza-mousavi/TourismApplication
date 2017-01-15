@@ -47,4 +47,7 @@ android:background="@mipmap/background"
         android:layout_below="@id/header"/>
 
 
+
+
+
 </RelativeLayout>
