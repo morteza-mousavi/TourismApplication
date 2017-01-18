@@ -12,6 +12,7 @@
 
 
         <LinearLayout
+            android:padding="5dp"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -40,24 +41,14 @@
 
 
 
-            <Button
-                android:layout_gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#00FFFFFF" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/Menu_Train"
-                android:textColor="#00FFFFFF" />
 
 
 
         </LinearLayout>
 
         <LinearLayout
+            android:padding="5dp"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -87,6 +78,7 @@
 
 
     <LinearLayout
+
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -99,18 +91,7 @@
 
 
 
-            <Button
-                android:layout_gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#00FFFFFF" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/Menu_Train"
-                android:textColor="#00FFFFFF" />
         </LinearLayout>
 
 
@@ -118,6 +99,7 @@
 
 
         <LinearLayout
+
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -128,7 +110,7 @@
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/tourism" />
+                android:background="@drawable/scenery_btn_mainmenu" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -146,18 +128,7 @@
 
 
 
-            <Button
-                android:layout_gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#00FFFFFF" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/Menu_Train"
-                android:textColor="#00FFFFFF" />
         </LinearLayout>
 
 
@@ -171,6 +142,7 @@
 
 
         <LinearLayout
+            android:padding="5dp"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -202,18 +174,6 @@
 
 
 
-            <Button
-                android:layout_gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#00FFFFFF" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/Menu_Train"
-                android:textColor="#00FFFFFF" />
         </LinearLayout>
 
 
@@ -225,6 +185,7 @@
 
 
             <Button
+                android:padding="5dp"
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"

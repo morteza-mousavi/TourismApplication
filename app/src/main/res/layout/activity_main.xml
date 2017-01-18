@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/background"
     tools:context="ir.reserveiran.mobile.tourismapplication.MainActivity"
-    tools:openDrawer="start">
+    tools:openDrawer="end">
 
     <include layout="@layout/parent_main" />
 
@@ -15,7 +15,7 @@
         android:id="@+id/Side_menu"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
+        android:layout_gravity="end"
         app:menu="@menu/side_menu"
         app:headerLayout="@layout/side_menu_header"
 

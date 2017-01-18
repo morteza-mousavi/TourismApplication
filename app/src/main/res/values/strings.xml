@@ -12,6 +12,14 @@
     <string name="Menu_Train">Train</string>
     <string name="Menu_Scenery">Scenery</string>
     <string name="title_activity_side_menu">side_menu</string>
+    <string name="counter_plus">+</string>
+    <string name="counter_mines">-</string>
+    <string name="hotel_city">City Name</string>
+    <string name="hotel_date">Date Entry</string>
+    <string name="hotel_night">Night</string>
+    <string name="search">Search</string>
+
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
