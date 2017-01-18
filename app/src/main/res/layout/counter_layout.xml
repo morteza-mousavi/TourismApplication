@@ -2,15 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal">
+
+
 
     <Button
-        android:id="@+id/btn_plus"
-        android:layout_width="90dp"
+        android:id="@+id/btn_mines"
+        android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:background="@drawable/buttons_back"
-        android:text="@string/counter_plus"
+        android:text="@string/counter_mines"
         android:textColor="@android:color/black"
         />
 
@@ -19,18 +21,18 @@
         android:background="@drawable/edit_texts"
         android:id="@+id/txt_couter"
         android:layout_width="90dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:layout_gravity="center" />
 
 
     <Button
-        android:id="@+id/btn_mines"
-        android:layout_width="90dp"
+        android:id="@+id/btn_plus"
+        android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:background="@drawable/buttons_back"
-        android:text="@string/counter_mines"
+        android:text="@string/counter_plus"
         android:textColor="@android:color/black"
         />
 
