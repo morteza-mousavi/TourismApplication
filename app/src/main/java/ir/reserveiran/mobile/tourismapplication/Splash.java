@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class Splash extends AppCompatActivity {
 
@@ -11,6 +14,10 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d("Token Generate :  ", refreshedToken);
 
 
         new Handler().postDelayed(new Runnable() {
