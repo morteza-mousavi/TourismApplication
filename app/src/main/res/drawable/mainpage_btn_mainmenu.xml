@@ -4,7 +4,7 @@
     <layer-list>
         <item>
             <bitmap android:gravity="fill"
-                android:src="@drawable/mainpage_active"
+                android:src="@drawable/mainpage"
                 android:tileMode="disabled"
                 android:scaleType="fitCenter"
                 />
@@ -17,7 +17,7 @@
     <layer-list>
         <item>
             <bitmap android:gravity="fill"
-                android:src="@drawable/mainpage"
+                android:src="@drawable/mainpage_active"
                 android:tileMode="disabled"
                 android:scaleType="fitCenter"
                 />

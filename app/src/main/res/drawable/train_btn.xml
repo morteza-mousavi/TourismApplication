@@ -4,7 +4,7 @@
         <layer-list>
             <item>
                 <bitmap android:gravity="fill"
-                    android:src="@drawable/train__active"
+                    android:src="@drawable/train"
                     android:tileMode="disabled"
                     android:scaleType="fitCenter"
                     />
@@ -19,7 +19,7 @@
         <layer-list>
             <item>
                 <bitmap android:gravity="fill"
-                    android:src="@drawable/train"
+                    android:src="@drawable/train__active"
                     android:tileMode="disabled"
                     android:scaleType="fitCenter"
                     />
