@@ -13,6 +13,7 @@ import org.w3c.dom.Text;
 
 import java.util.List;
 
+import ir.reserveiran.mobile.tourismapplication.Model.CityResponseModel;
 import ir.reserveiran.mobile.tourismapplication.Model.CityViewModel;
 import ir.reserveiran.mobile.tourismapplication.R;
 
@@ -20,39 +21,35 @@ import ir.reserveiran.mobile.tourismapplication.R;
  * Created by Morteza on 1/11/2017.
  */
 
-public class CityAdapter extends ArrayAdapter<CityViewModel> {
+public class CityAdapter extends ArrayAdapter<CityResponseModel> {
 
     Context mContext;
     LayoutInflater inflater;
-    List<CityViewModel> list;
+    List<CityResponseModel> listobjects;
 
-    public CityAdapter(Context context, int resource, List<CityViewModel> objects) {
+    public CityAdapter(Context context, int resource, List<CityResponseModel> objects) {
         super(context, resource, objects);
         this.mContext = context;
-        list=objects;
+        listobjects=objects;
         inflater = LayoutInflater.from(mContext);
 
     }
 
-    @Override
-    public int getCount() {
-        return list.size ();
-    }
 
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = convertView;
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+        View item = inflater.inflate(R.layout.item_city_row, parent, false);
+        TextView TxtCityName = (TextView) item.findViewById(R.id.item_cityName);
+        TextView TxtCityId = (TextView) item.findViewById(R.id.item_cityId);
 
-        view = inflater.inflate(R.layout.item_city_row, null);
-        TextView cityName = (TextView) view.findViewById(R.id.cityName);
-        TextView cityId = (TextView) view.findViewById(R.id.cityId);
-
-        CityViewModel cityViewModel = getItem(position);
-
-        cityName.setText(cityViewModel.getCityName());
-        cityId.setText(cityViewModel.getCityId()+"");
-
-        return view;
+        TxtCityName.setText(listobjects.get(position).getCityName());
+        TxtCityId.setText(listobjects.get(position).getCityId()+"");
+        return item;
+    }
+    @Override
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
+        return getView(position, convertView, parent);
     }
 }

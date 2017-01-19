@@ -12,6 +12,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import ir.reserveiran.mobile.tourismapplication.Adapters.CityAdapter;
+import ir.reserveiran.mobile.tourismapplication.Model.CityResponseModel;
 import ir.reserveiran.mobile.tourismapplication.Model.CityViewModel;
 
 public class SearchDialog extends AppCompatActivity {
@@ -21,9 +22,9 @@ public class SearchDialog extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_dialog);
 
-        ArrayList<CityViewModel> cityArray = new ArrayList<>();
+        ArrayList<CityResponseModel> cityArray = new ArrayList<>();
 
-        CityViewModel c = new CityViewModel();
+        CityResponseModel c = new CityResponseModel();
         c.setCityId(21);
         c.setCityName("تهران");
         cityArray.add(c);
@@ -37,7 +38,7 @@ public class SearchDialog extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView cityid=(TextView) view.findViewById(R.id.cityId);
+                TextView cityid=(TextView) view.findViewById(R.id.item_cityId);
                 Toast.makeText(SearchDialog.this, cityid.getText(), Toast.LENGTH_SHORT).show();
 
             }

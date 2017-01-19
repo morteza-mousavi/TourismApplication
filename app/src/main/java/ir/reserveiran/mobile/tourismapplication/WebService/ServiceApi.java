@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceApi {
     public static String BASE_URL = "http://telegramapi.reserveiran.ir/";
-    public static String METHOD_GetFirstParams="Api/GetFirstParams";
+    //public static String METHOD_GetFirstParams="Api/GetFirstParams";
     Context mContext;
     public  ReservationApi reservationApi;
     public ServiceApi(Context context) {

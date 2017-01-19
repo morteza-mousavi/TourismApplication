@@ -12,15 +12,6 @@ public class FirstParamRequest {
     @SerializedName("DeviceId")
     @Expose
     public String DeviceId;
-
-    public String getPushId() {
-        return PushId;
-    }
-
-    public void setPushId(String pushId) {
-        PushId = pushId;
-    }
-
     public String getDeviceId() {
         return DeviceId;
     }
@@ -29,7 +20,20 @@ public class FirstParamRequest {
         DeviceId = deviceId;
     }
 
-    @SerializedName("PushId")
+
+/*
+    public String getPushId() {
+        return PushId;
+    }
+
+    public void setPushId(String pushId) {
+        PushId = pushId;
+    }
+*/
+
+
+
+/*    @SerializedName("PushId")
     @Expose
-    public String PushId;
+    public String PushId;*/
 }

@@ -2,18 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/cityName"
+        android:id="@+id/item_cityName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#d1f506"/>
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"/>
 
     <TextView
-        android:id="@+id/cityId"
+        android:id="@+id/item_cityId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+         />
 
 </LinearLayout>

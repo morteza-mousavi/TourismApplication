@@ -29,23 +29,27 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        final String Device_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
+        String Device_id =  Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
         Log.d("Device_Id", Device_id);
 
         ServiceApi serviceApi = new ServiceApi(getApplicationContext());
 
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        if (refreshedToken == null)
+        {
+            refreshedToken=" ";
+        }
         Log.d("PushId :  ", refreshedToken);
+
 
         FirstParamRequest request = new FirstParamRequest();
         request.setDeviceId(Device_id);
-        request.setPushId(refreshedToken);
+        /*request.setPushId(refreshedToken);*/
 
         CheckStatusClass statusClass = new CheckStatusClass(getApplicationContext());
         boolean networkConnected = statusClass.isNetworkConnected();
         if (networkConnected) {
-            Call<FirstParamResponse> responseCall = serviceApi.reservationApi.GetTokenAccess(request);
+            Call<FirstParamResponse> responseCall = serviceApi.reservationApi.GetFirstParams(request);
             responseCall.enqueue(new Callback<FirstParamResponse>() {
                 @Override
                 public void onResponse(Call<FirstParamResponse> call, Response<FirstParamResponse> response) {
