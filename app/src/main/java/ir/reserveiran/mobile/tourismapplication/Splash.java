@@ -1,9 +1,11 @@
 package ir.reserveiran.mobile.tourismapplication;
 
 import android.bluetooth.BluetoothClass;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.provider.Settings;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +16,7 @@ import ir.reserveiran.mobile.tourismapplication.Model.ErrorClass;
 import ir.reserveiran.mobile.tourismapplication.Model.FirstParamRequest;
 import ir.reserveiran.mobile.tourismapplication.Model.FirstParamResponse;
 import ir.reserveiran.mobile.tourismapplication.Utility.ApiKeyManagement;
+import ir.reserveiran.mobile.tourismapplication.Utility.CheckStatusClass;
 import ir.reserveiran.mobile.tourismapplication.WebService.ServiceApi;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,43 +42,80 @@ public class Splash extends AppCompatActivity {
         request.setDeviceId(Device_id);
         request.setPushId(refreshedToken);
 
+        CheckStatusClass statusClass = new CheckStatusClass(getApplicationContext());
+        boolean networkConnected = statusClass.isNetworkConnected();
+        if (networkConnected) {
+            Call<FirstParamResponse> responseCall = serviceApi.reservationApi.GetTokenAccess(request);
+            responseCall.enqueue(new Callback<FirstParamResponse>() {
+                @Override
+                public void onResponse(Call<FirstParamResponse> call, Response<FirstParamResponse> response) {
+                    int StatusCode = response.code();
+                    Log.e("Status Code", StatusCode + "");
+                    if (response.isSuccessful()) {
+                        FirstParamResponse paramResponse = response.body();
+                        String ApiKey = paramResponse.getApiKey();
+                        ErrorClass Errors = paramResponse.getError();
 
-        Call<FirstParamResponse> responseCall = serviceApi.reservationApi.GetTokenAccess(request);
-        responseCall.enqueue(new Callback<FirstParamResponse>() {
-            @Override
-            public void onResponse(Call<FirstParamResponse> call, Response<FirstParamResponse> response) {
-                int StatusCode = response.code();
-                Log.e("Status Code", StatusCode + "");
-                if (response.isSuccessful()) {
-                    FirstParamResponse paramResponse = response.body();
-                    String ApiKey = paramResponse.getApiKey();
-                    ErrorClass Errors = paramResponse.getError();
-
-                    Log.i("ApiKey", ApiKey);
-                    Log.i("Error Class Result", "Error ID : " + Errors.getErrorId() + " => " + Errors.getErrorText());
+                        Log.i("ApiKey", ApiKey);
+                        Log.i("Error Class Result", "Error ID : " + Errors.getErrorId() + " => " + Errors.getErrorText());
 
 
-                    ApiKeyManagement apiKeyManagement = new ApiKeyManagement(getApplicationContext());
-                    apiKeyManagement.SetApiKey(ApiKey);
+                        ApiKeyManagement apiKeyManagement = new ApiKeyManagement(getApplicationContext());
+                        apiKeyManagement.SetApiKey(ApiKey);
+                    } else {
+                    }
                 }
-                else {
+
+                @Override
+                public void onFailure(Call<FirstParamResponse> call, Throwable t) {
+                    Log.e("Error Code", "Error ");
                 }
-            }
-
-            @Override
-            public void onFailure(Call<FirstParamResponse> call, Throwable t) {
-                Log.e("Error Code",   "Error ");
-            }
-        });
+            });
 
 
-                new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(Splash.this, MainActivity.class);
-                startActivity(intent);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(Splash.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }, 1000);
+
+        } else {
+
+            ShowConnectionDialog();
+            //startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+        }
+    }
+
+    private void ShowConnectionDialog()
+    {
+        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+
+
+       // adb.setView(alertDialogView);
+
+
+        adb.setTitle("عدم برقراری ارتباط با اینترنت");
+        adb.setMessage("جهت استفاده از برنامه نیاز به اتصال به اینترنت دارید");
+
+
+        adb.setIcon(android.R.drawable.ic_dialog_alert);
+
+
+        adb.setPositiveButton("ورود به تنظیمات اینترنت", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+                startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+            } });
+
+
+        adb.setNegativeButton("انصراف", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
                 finish();
-            }
-        }, 1000);
+            } });
+        adb.show();
     }
 }
