@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_hotel_search"
+    android:id="@+id/Drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ir.reserveiran.mobile.tourismapplication.HotelSearch">
+    android:background="@mipmap/background"
+    tools:context="ir.reserveiran.mobile.tourismapplication.MainActivity"
+    tools:openDrawer="end">
+
+    <include layout="@layout/parent_hotel" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/Side_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:menu="@menu/side_menu"
+        app:headerLayout="@layout/side_menu_header"
+
+        >
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:hint="تاريخ ورود را وارد كنيد"
-        android:id="@+id/TxtFromDate"
+    </android.support.design.widget.NavigationView>
 
-        android:background="@drawable/textview_public"
-        />
 
-</RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

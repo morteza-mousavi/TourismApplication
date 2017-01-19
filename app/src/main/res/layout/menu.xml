@@ -20,6 +20,7 @@
 
 
             <Button
+                android:id="@+id/airplane_btn"
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -56,6 +57,7 @@
 
 
             <Button
+                android:id="@+id/bus_btn"
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -105,8 +107,8 @@
             android:layout_height="wrap_content">
 
 
-
             <Button
+                android:id="@+id/scenery_btn"
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -150,6 +152,7 @@
 
 
             <Button
+                android:id="@+id/hotel_btn"
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -185,6 +188,7 @@
 
 
             <Button
+                android:id="@+id/train_btn"
                 android:padding="5dp"
                 android:layout_gravity="center"
                 android:layout_width="100dp"

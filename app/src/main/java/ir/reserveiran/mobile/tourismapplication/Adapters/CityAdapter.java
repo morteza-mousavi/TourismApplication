@@ -24,13 +24,20 @@ public class CityAdapter extends ArrayAdapter<CityViewModel> {
 
     Context mContext;
     LayoutInflater inflater;
+    List<CityViewModel> list;
 
     public CityAdapter(Context context, int resource, List<CityViewModel> objects) {
         super(context, resource, objects);
         this.mContext = context;
+        list=objects;
         inflater = LayoutInflater.from(mContext);
+
     }
 
+    @Override
+    public int getCount() {
+        return list.size ();
+    }
 
     @NonNull
     @Override

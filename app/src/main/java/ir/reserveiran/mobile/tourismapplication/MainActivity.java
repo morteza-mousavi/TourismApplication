@@ -12,13 +12,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout Drawer;
     NavigationView Side_menu;
-    Button header_manu,header_search,header_alarm;
+    Button header_manu,header_search,header_alarm,hotel_btn,airplane_btn,scenery_btn,bus_btn,train_btn;
 
 
     @Override
@@ -31,7 +32,25 @@ public class MainActivity extends AppCompatActivity {
         header_manu = (Button)findViewById(R.id.header_manu);
         header_search = (Button)findViewById(R.id.header_search);
         header_alarm = (Button)findViewById(R.id.header_alarm);
+        hotel_btn = (Button)findViewById(R.id.hotel_btn);
+        airplane_btn = (Button)findViewById(R.id.airplane_btn);
+        scenery_btn = (Button)findViewById(R.id.scenery_btn);
+        bus_btn = (Button)findViewById(R.id.bus_btn);
+        train_btn = (Button)findViewById(R.id.train_btn);
 
+
+
+
+        hotel_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),HotelSearch.class);
+                startActivity(intent);
+
+
+            }
+        });
 
 
 
