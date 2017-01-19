@@ -12,6 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mohamadamin.persianmaterialdatetimepicker.date.DatePickerDialog;
+import com.mohamadamin.persianmaterialdatetimepicker.utils.PersianCalendar;
+
 import java.util.List;
 
 import ir.reserveiran.mobile.tourismapplication.Adapters.CityAdapter;
@@ -21,19 +24,72 @@ import ir.reserveiran.mobile.tourismapplication.Model.CityViewModel;
 import ir.reserveiran.mobile.tourismapplication.Model.ErrorClass;
 import ir.reserveiran.mobile.tourismapplication.Model.TokenRequest;
 import ir.reserveiran.mobile.tourismapplication.Utility.ApiKeyManagement;
+import ir.reserveiran.mobile.tourismapplication.Utility.DatePickerDailog;
+import ir.reserveiran.mobile.tourismapplication.Utility.JalaliCalendar;
 import ir.reserveiran.mobile.tourismapplication.WebService.ServiceApi;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class HotelSearch extends AppCompatActivity {
+public class HotelSearch extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
     Spinner SpinnerCityName;
+    JalaliCalendar dateandtime;
+    TextView hotel_date;
+
+    @Override
+    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+        Log.e("Date = ",year+"/"+((int) monthOfYear+1)+"/"+dayOfMonth);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_search);
+
+        hotel_date = (TextView) findViewById(R.id.hotel_date);
+        hotel_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+/*                DatePickerDailog dp = new DatePickerDailog(HotelSearch.this,
+                        dateandtime, new DatePickerDailog.DatePickerListner() {
+
+                    // @SuppressLint("SimpleDateFormat")
+                    @Override
+                    public void OnDoneButton(Dialog datedialog, String c) {
+                        datedialog.dismiss();
+
+                        hotel_date.setText(c.toString());
+                    }
+
+                    @Override
+                    public void OnCancelButton(Dialog datedialog) {
+                        // TODO Auto-generated method stub
+                        datedialog.dismiss();
+                    }
+                });
+                dp.show();*/
+
+
+                PersianCalendar persianCalendar = new PersianCalendar();
+                persianCalendar.setPersianDate(persianCalendar.getPersianYear(),
+                        persianCalendar.getPersianMonth(),
+                        persianCalendar.getPersianDay());
+                DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(
+                        HotelSearch.this,
+                        persianCalendar.getPersianYear(),
+                        persianCalendar.getPersianMonth(),
+                        persianCalendar.getPersianDay()
+                );
+                datePickerDialog.setThemeDark(true);
+                datePickerDialog.setMinDate(persianCalendar);
+                datePickerDialog.show(getFragmentManager(), "Datepickerdialog");
+
+
+            }
+
+        });
+
 
         ServiceApi serviceApi = new ServiceApi(getApplicationContext());
 
@@ -76,18 +132,26 @@ public class HotelSearch extends AppCompatActivity {
             }
         });
 
-/*        SpinnerCityName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        SpinnerCityName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String item = (String) parent.getItemAtPosition(position);
-                Toast.makeText(parent.getContext(), "Item selected: " + item, Toast.LENGTH_LONG).show();
+
+                TextView Txt_CityName =(TextView) view.findViewById(R.id.item_cityName);
+                TextView Txt_CityId =(TextView) view.findViewById(R.id.item_cityId);
+
+                String Text = Txt_CityName.getText().toString()+ " ==> "+ Txt_CityId.getText().toString();
+                Toast.makeText(HotelSearch.this, Text, Toast.LENGTH_SHORT).show();
+
+
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });*/
+        });
 
     }
+
+
 }
