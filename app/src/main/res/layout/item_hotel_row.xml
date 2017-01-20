@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <RatingBar
+            android:background="#00fffff"
             android:max="5"
             style="@android:style/Widget.Holo.Light.RatingBar.Small"
             android:rating="5"
