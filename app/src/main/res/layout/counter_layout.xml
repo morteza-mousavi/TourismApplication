@@ -19,7 +19,7 @@
     <TextView
         android:text="1"
         android:background="@drawable/edit_texts"
-        android:id="@+id/txt_couter"
+        android:id="@+id/txt_night_couter"
         android:layout_width="90dp"
         android:layout_height="30dp"
         android:gravity="center"

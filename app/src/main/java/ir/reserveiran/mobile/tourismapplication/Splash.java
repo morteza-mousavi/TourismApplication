@@ -3,6 +3,7 @@ package ir.reserveiran.mobile.tourismapplication;
 import android.bluetooth.BluetoothClass;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
@@ -11,6 +12,8 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import java.util.Locale;
 
 import ir.reserveiran.mobile.tourismapplication.Model.ErrorClass;
 import ir.reserveiran.mobile.tourismapplication.Model.FirstParamRequest;
@@ -28,6 +31,11 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        Configuration configuration = getResources().getConfiguration();
+        configuration.setLayoutDirection(new Locale("fa"));
+
+        
+        getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
 
         String Device_id =  Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
         Log.d("Device_Id", Device_id);

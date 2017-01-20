@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<LinearLayout
+        android:id="@+id/LinearImageStar"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RatingBar
+            android:max="5"
+            style="@android:style/Widget.Holo.Light.RatingBar.Small"
+            android:rating="5"
+            android:id="@+id/hotel_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+        <ImageView
+            android:id="@+id/img_Hotel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+>
+    </LinearLayout>
+<LinearLayout
+
+    android:paddingLeft="10dp"
+    android:layout_toRightOf="@+id/LinearImageStar"
+    android:layout_toLeftOf="@+id/LinearButtonLeft"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:id="@+id/Txt_hotelName"
+            android:layout_gravity="center"
+            android:text="نام هتل"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+<LinearLayout
+    android:layout_toRightOf="@+id/Txt_hotelName"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="25% تخفیف"
+        android:id="@+id/txt_hotel_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="شروع قیمت از 195000 تومان"
+        android:id="@+id/txt_hotel_start_price_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/LinearButtonLeft"
+    android:layout_alignParentRight="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txt_hotelId"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_alignParentRight="true"
+        android:text="رزرو"
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+    <TextView
+android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_alignBottom="@+id/LinearImageStar"
+        android:id="@+id/Txt_hotel_address"
+        android:text="آدرس هتل "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
