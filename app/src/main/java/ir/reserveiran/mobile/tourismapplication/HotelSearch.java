@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
     Spinner SpinnerCityName;
     JalaliCalendar dateandtime;
     TextView hotel_date;
+    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support;
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
@@ -48,6 +50,65 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_search);
+
+
+
+        btn_about_us = (Button)findViewById(R.id.btn_about_us);
+        btn_login = (Button)findViewById(R.id.btn_login);
+        btn_home = (Button)findViewById(R.id.btn_home);
+        btn_favorite = (Button)findViewById(R.id.btn_favorite);
+        btn_support = (Button)findViewById(R.id.btn_support);
+
+
+
+        btn_about_us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),FavoriteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_support.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),SupportActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
 
         hotel_date = (TextView) findViewById(R.id.hotel_date);
         hotel_date.setOnClickListener(new View.OnClickListener() {

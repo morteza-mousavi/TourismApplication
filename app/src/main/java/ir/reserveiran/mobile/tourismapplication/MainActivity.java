@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout Drawer;
     NavigationView Side_menu;
     Button header_manu,header_search,header_alarm,hotel_btn,airplane_btn,scenery_btn,bus_btn,train_btn,btn_about_us,btn_login
-           ,btn_home,btn_favorite ;
+           ,btn_home,btn_favorite ,btn_support;
 
 
     @Override
@@ -43,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
         btn_login = (Button)findViewById(R.id.btn_login);
         btn_home = (Button)findViewById(R.id.btn_home);
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
+        btn_support = (Button)findViewById(R.id.btn_support);
 
 
 
-        btn_about_us.setOnClickListener(new View.OnClickListener() {
+       btn_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
+         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -64,14 +65,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_home.setOnClickListener(new View.OnClickListener() {
+       /* btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         btn_favorite.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_support.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),SupportActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
