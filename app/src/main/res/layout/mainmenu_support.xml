@@ -6,8 +6,10 @@
     android:orientation="horizontal">
 
     <LinearLayout
+        android:layout_marginTop="2dp"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/right1"
         android:layout_gravity="center"
         android:layout_weight="1"
 
@@ -15,17 +17,16 @@
 
         <Button
             android:id="@+id/btn_support"
+            android:layout_marginTop="5dp"
            android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/support_btn_mainmenu" />
+            android:background="@drawable/support" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
             android:text="@string/MainMenu_Support"
             android:textColor="@color/colorText" />
     </LinearLayout>

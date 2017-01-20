@@ -45,7 +45,10 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".HotelSearchResult"></activity>
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".SupportActivity"></activity>
     </application>
 
 </manifest>
