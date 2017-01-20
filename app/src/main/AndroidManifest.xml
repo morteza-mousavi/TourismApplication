@@ -49,7 +49,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".FavoriteActivity" />
         <activity android:name=".SupportActivity" />
-        <activity android:name=".BusActivity"></activity>
+        <activity android:name=".BusActivity" />
+        <activity android:name=".SceneryActivity"></activity>
     </application>
 
 </manifest>
