@@ -39,7 +39,9 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        Log.e("Date = ",year+"/"+((int) monthOfYear+1)+"/"+dayOfMonth);
+        String FromDate = year+"/"+((int) monthOfYear+1)+"/"+dayOfMonth;
+        Log.e("Date = ",FromDate);
+        hotel_date.setText(FromDate);
     }
 
     @Override
