@@ -16,13 +16,13 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@drawable/bus" />
+            android:background="@drawable/tourism" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/Menu_bus"
+            android:text="@string/Menu_Scenery"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
