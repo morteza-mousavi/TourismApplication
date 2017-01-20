@@ -50,7 +50,8 @@
         <activity android:name=".FavoriteActivity" />
         <activity android:name=".SupportActivity" />
         <activity android:name=".BusActivity" />
-        <activity android:name=".SceneryActivity"></activity>
+        <activity android:name=".SceneryActivity" />
+        <activity android:name=".TraineActivity"></activity>
     </application>
 
 </manifest>

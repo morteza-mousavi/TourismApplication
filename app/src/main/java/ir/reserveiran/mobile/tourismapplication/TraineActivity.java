@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+public class TraineActivity extends AppCompatActivity {
+
 
     Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support;
 
@@ -14,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_traine);
 
 
         btn_about_us = (Button)findViewById(R.id.btn_about_us);
@@ -23,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
         btn_support = (Button)findViewById(R.id.btn_support);
 
-//
+
 
         btn_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,14 +35,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-      /*  btn_login.setOnClickListener(new View.OnClickListener() {
+        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +70,8 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 }

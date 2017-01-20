@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),AirplaineActivity.class);
+                Intent intent = new Intent(getApplicationContext(),SceneryActivity.class);
                 startActivity(intent);
 
 
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),AirplaineActivity.class);
+                Intent intent = new Intent(getApplicationContext(),BusActivity.class);
                 startActivity(intent);
 
 
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),AirplaineActivity.class);
+                Intent intent = new Intent(getApplicationContext(),TraineActivity.class);
                 startActivity(intent);
 
 

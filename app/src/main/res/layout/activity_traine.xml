@@ -9,7 +9,7 @@
     tools:context="ir.reserveiran.mobile.tourismapplication.MainActivity"
     tools:openDrawer="end">
 
-    <include layout="@layout/parent_scenery" />
+    <include layout="@layout/parent_traine" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/Side_menu"
