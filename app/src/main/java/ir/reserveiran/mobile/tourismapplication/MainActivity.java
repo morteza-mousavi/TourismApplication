@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     DrawerLayout Drawer;
     NavigationView Side_menu;
-    Button header_manu,header_search,header_alarm,hotel_btn,airplane_btn,scenery_btn,bus_btn,train_btn;
+    Button header_manu,header_search,header_alarm,hotel_btn,airplane_btn,scenery_btn,bus_btn,train_btn,btn_about_us,btn_login
+           ,btn_home,btn_favorite ;
 
 
     @Override
@@ -37,6 +38,54 @@ public class MainActivity extends AppCompatActivity {
         scenery_btn = (Button)findViewById(R.id.scenery_btn);
         bus_btn = (Button)findViewById(R.id.bus_btn);
         train_btn = (Button)findViewById(R.id.train_btn);
+
+        btn_about_us = (Button)findViewById(R.id.btn_about_us);
+        btn_login = (Button)findViewById(R.id.btn_login);
+        btn_home = (Button)findViewById(R.id.btn_home);
+        btn_favorite = (Button)findViewById(R.id.btn_favorite);
+
+
+
+        btn_about_us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),FavoriteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
 
 
 
