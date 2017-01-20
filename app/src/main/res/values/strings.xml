@@ -8,7 +8,7 @@
     <string name="MainMenu_Profile">Profile</string>
     <string name="Menu_Hotel">Hotel</string>
     <string name="Menu_Airpalane">Airpalane</string>
-    <string name="Menu_bus">bus</string>
+    <string name="Menu_bus">Bus</string>
     <string name="Menu_Train">Train</string>
     <string name="Menu_Scenery">Scenery</string>
     <string name="title_activity_side_menu">side_menu</string>
