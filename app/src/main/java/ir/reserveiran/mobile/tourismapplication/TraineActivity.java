@@ -39,6 +39,15 @@ public class TraineActivity extends AppCompatActivity {
     int night = 1;
 
 
+    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+        FromDate = year + "/" + ((int) monthOfYear + 1) + "/" + dayOfMonth;
+
+
+        Log.e("Date = ", FromDate);
+        hotel_date.setText(FromDate);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
