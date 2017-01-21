@@ -64,7 +64,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
         btn_support = (Button)findViewById(R.id.btn_support);
 
-
+        search_btn = (Button) findViewById(R.id.search_btn);
         btn_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

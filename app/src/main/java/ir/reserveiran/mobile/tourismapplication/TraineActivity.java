@@ -30,7 +30,7 @@ import retrofit2.Response;
 public class TraineActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
 
-    Spinner SpinnerCityName;
+    Spinner SpinnerFromCityName,SpinnerToCityName;
     Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_plus,btn_mines,search_btn;
     TextView txt_night_couter,hotel_date;
 
@@ -63,6 +63,8 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
         btn_home = (Button)findViewById(R.id.btn_home);
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
         btn_support = (Button)findViewById(R.id.btn_support);
+
+        search_btn = (Button) findViewById(R.id.search_btn);
 
 
         btn_plus.setOnClickListener(new View.OnClickListener() {
@@ -145,7 +147,7 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                night=Integer.parseInt(txt_night_couter.getText().toString());
+/*                night=Integer.parseInt(txt_night_couter.getText().toString());
 
 
                 Intent SearchResultActivity = new Intent(getApplicationContext(), HotelSearchResult.class);
@@ -153,7 +155,7 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
                 SearchResultActivity.putExtra("FromFaDate", FromDate);
                 SearchResultActivity.putExtra("night", night);
 
-                startActivity(SearchResultActivity);
+                startActivity(SearchResultActivity);*/
             }
         });
 
@@ -161,27 +163,6 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
         hotel_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-/*                DatePickerDailog dp = new DatePickerDailog(HotelSearch.this,
-                        dateandtime, new DatePickerDailog.DatePickerListner() {
-
-                    // @SuppressLint("SimpleDateFormat")
-                    @Override
-                    public void OnDoneButton(Dialog datedialog, String c) {
-                        datedialog.dismiss();
-
-                        hotel_date.setText(c.toString());
-                    }
-
-                    @Override
-                    public void OnCancelButton(Dialog datedialog) {
-                        // TODO Auto-generated method stub
-                        datedialog.dismiss();
-                    }
-                });
-                dp.show();*/
-
-
-
 
                 PersianCalendar persianCalendar = new PersianCalendar();
                 persianCalendar.setPersianDate(persianCalendar.getPersianYear(),
@@ -208,7 +189,8 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
                 "در حال ارتباط با سرور ، لطفاً شکیبا باشید", true);
         ServiceApi serviceApi = new ServiceApi(getApplicationContext());
 
-        SpinnerCityName = (Spinner) findViewById(R.id.SpinnerCityName);
+        SpinnerFromCityName = (Spinner) findViewById(R.id.SpinnerFromCityName);
+        SpinnerToCityName = (Spinner) findViewById(R.id.SpinnerToCityName);
 
         TokenRequest tokenRequest = new TokenRequest();
         ApiKeyManagement apiKeyManagement = new ApiKeyManagement(getApplicationContext());
@@ -232,7 +214,8 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
                         CityAdapter adapter =
                                 new CityAdapter(TraineActivity.this,
                                         R.layout.item_city_row, cityResponseModelList);
-                        SpinnerCityName.setAdapter(adapter);
+                        SpinnerFromCityName.setAdapter(adapter);
+                        SpinnerToCityName.setAdapter(adapter);
 
                     }
 
@@ -247,7 +230,7 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
             }
         });
 
-        SpinnerCityName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        SpinnerFromCityName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -257,6 +240,18 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
                 String Text = Txt_CityName.getText().toString() + " ==> " + Txt_CityId.getText().toString();
                 //Toast.makeText(HotelSearch.this, Text, Toast.LENGTH_SHORT).show();
                 CityID=Integer.parseInt(Txt_CityId.getText().toString());
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        SpinnerToCityName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
             }
 

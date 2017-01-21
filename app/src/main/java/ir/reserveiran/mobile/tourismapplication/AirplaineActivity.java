@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class AirplaineActivity extends AppCompatActivity {
 
-    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support;
+    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,search_btn;
 
 
     @Override
@@ -23,7 +23,7 @@ public class AirplaineActivity extends AppCompatActivity {
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
         btn_support = (Button)findViewById(R.id.btn_support);
 
-
+        search_btn = (Button) findViewById(R.id.search_btn);
 
         btn_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
