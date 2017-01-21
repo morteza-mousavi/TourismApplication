@@ -10,102 +10,92 @@
 
 
     <LinearLayout
-        android:layout_weight="1"
-        android:gravity="center"
         android:id="@+id/LinearLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:gravity="center"
         android:orientation="horizontal">
+
 
         <Button
             android:id="@+id/btn_ir"
-            android:layout_margin="5dp"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_gravity="center"
-            android:background="@drawable/ir_btn"/>
+            android:layout_margin="5dp"
+            android:background="@drawable/ir_btn" />
 
         <Button
             android:id="@+id/btn_en"
-            android:layout_margin="5dp"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_gravity="center"
-            android:background="@drawable/en_btn"/>
+            android:layout_margin="5dp"
+            android:background="@drawable/en_btn" />
 
     </LinearLayout>
 
     <LinearLayout
 
-        android:layout_weight="1"
-        android:gravity="center"
         android:id="@+id/LinearUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:gravity="center"
-            android:layout_weight="0.33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="center"
             android:text="@string/user"
-            android:textSize="20sp"
             android:textColor="@color/colorPrimaryDark"
-            />
+            android:textSize="20sp" />
 
 
         <EditText
             android:id="@+id/txt_user_name"
-            android:gravity="center"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/edit_texts"
-            />
+            android:gravity="center" />
 
 
-
-
-
-        </LinearLayout>
-
+    </LinearLayout>
 
 
     <LinearLayout
 
-        android:layout_weight="1"
-        android:gravity="center"
         android:id="@+id/LinearPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:gravity="center"
-            android:layout_weight="0.33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="center"
             android:text="@string/pass"
-            android:textSize="20sp"
             android:textColor="@color/colorPrimaryDark"
-            />
+            android:textSize="20sp" />
 
 
         <EditText
             android:id="@+id/txt_password"
-            android:gravity="center"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/edit_texts"
-            />
-
-
-
+            android:gravity="center" />
 
 
     </LinearLayout>
@@ -117,42 +107,43 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
+
         <Button
-            android:layout_weight="1"
             android:id="@+id/enter_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:layout_weight="1"
 
             android:background="@drawable/buttons_back"
             android:text="@string/enter"
             android:textAlignment="center" />
 
+
         <Button
-android:layout_weight="1"
             android:id="@+id/guest_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:layout_weight="1"
 
             android:background="@drawable/buttons_back"
             android:text="@string/guest"
             android:textAlignment="center" />
 
 
-
         <Button
-            android:layout_weight="1"
             android:id="@+id/register_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:layout_weight="1"
 
             android:background="@drawable/buttons_back"
             android:text="@string/register"

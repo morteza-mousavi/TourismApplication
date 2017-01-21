@@ -55,7 +55,8 @@
         <activity android:name=".BusActivity" />
         <activity android:name=".SceneryActivity" />
         <activity android:name=".TraineActivity" />
-        <activity android:name=".EnterActivity"></activity>
+        <activity android:name=".EnterActivity" />
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>
