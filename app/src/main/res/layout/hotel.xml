@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/back">
 
 
     <LinearLayout
@@ -25,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Hotel"
+            android:text="@string/Menu_Hotel"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
@@ -40,6 +41,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -48,13 +50,14 @@
             android:textSize="20sp" />
 
         <Spinner
+            android:layout_margin="5dp"
             android:id="@+id/SpinnerCityName"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
 
-            android:background="@drawable/edit_texts"
+
+            android:background="@drawable/drop"
             android:spinnerMode="dialog" />
 
 
@@ -71,6 +74,7 @@
 
 
         <TextView
+            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -79,6 +83,7 @@
             android:textSize="20sp" />
 
         <TextView
+            android:layout_margin="5dp"
             android:id="@+id/hotel_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,13 +107,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
+android:layout_margin="5dp"
             android:text="@string/hotel_night"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
 
-        <include layout="@layout/counter_layout"/>
+        <include
+            layout="@layout/counter_layout" />
 
     </LinearLayout>
 

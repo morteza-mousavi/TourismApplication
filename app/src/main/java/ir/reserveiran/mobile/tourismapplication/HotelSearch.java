@@ -46,7 +46,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
     Spinner SpinnerCityName;
     JalaliCalendar dateandtime;
     TextView hotel_date, txt_night_couter;
-    Button search_btn,btn_about_us,btn_login,btn_home,btn_favorite ,btn_support;
+    Button search_btn,btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_plus,btn_mines;
 
     int CityID = 21;
     String FromDate ;
@@ -66,7 +66,11 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_search);
+
         txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
+        btn_plus = (Button)findViewById(R.id.btn_plus);
+        btn_mines = (Button)findViewById(R.id.btn_mines);
+
         hotel_date = (TextView) findViewById(R.id.hotel_date);
         search_btn = (Button) findViewById(R.id.search_btn);
 
@@ -75,6 +79,40 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
         btn_home = (Button)findViewById(R.id.btn_home);
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
         btn_support = (Button)findViewById(R.id.btn_support);
+
+
+
+
+
+        btn_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                if (night<10)
+                {
+                    night++;
+                    txt_night_couter.setText(night+"");
+                }
+
+
+            }
+        });
+
+        btn_mines.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (night>1)
+                {
+                    night--;
+                    txt_night_couter.setText(night+"");
+                }
+
+
+            }
+        });
+
 
 
 
