@@ -1,6 +1,5 @@
 package ir.reserveiran.mobile.tourismapplication;
 
-import android.bluetooth.BluetoothClass;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -90,7 +89,7 @@ public class Splash extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(Splash.this, MainActivity.class);
+                    Intent intent = new Intent(Splash.this, EnterActivity.class);
                     startActivity(intent);
                     finish();
                 }

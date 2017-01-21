@@ -27,6 +27,16 @@
     <string name="baby">Baby</string>
     <string name="next">Next</string>
     <string name="back">Back</string>
+    <string name="enter">Enter</string>
+    <string name="guest">Guest</string>
+    <string name="register">Register</string>
+
+    <string name="name">Name</string>
+    <string name="family">Family</string>
+    <string name="cellphone">Cell Phone</string>
+
+    <string name="user">User Name</string>
+    <string name="pass">Password</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
