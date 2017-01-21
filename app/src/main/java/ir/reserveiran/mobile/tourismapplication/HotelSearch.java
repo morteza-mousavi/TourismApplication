@@ -46,10 +46,10 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
     Spinner SpinnerCityName;
     JalaliCalendar dateandtime;
     TextView hotel_date, txt_night_couter;
-    Button search_btn,btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_plus,btn_mines;
+    Button search_btn, btn_about_us, btn_login, btn_home, btn_favorite, btn_support, btn_plus, btn_mines;
 
     int CityID = 21;
-    String FromDate ;
+    String FromDate;
     int night = 1;
 
 
@@ -68,20 +68,21 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
         setContentView(R.layout.activity_hotel_search);
 
         txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
-        btn_plus = (Button)findViewById(R.id.btn_plus);
-        btn_mines = (Button)findViewById(R.id.btn_mines);
+        btn_plus = (Button) findViewById(R.id.btn_plus);
+        btn_mines = (Button) findViewById(R.id.btn_mines);
 
         hotel_date = (TextView) findViewById(R.id.hotel_date);
         search_btn = (Button) findViewById(R.id.search_btn);
 
-        btn_about_us = (Button)findViewById(R.id.btn_about_us);
-        btn_login = (Button)findViewById(R.id.btn_login);
-        btn_home = (Button)findViewById(R.id.btn_home);
-        btn_favorite = (Button)findViewById(R.id.btn_favorite);
-        btn_support = (Button)findViewById(R.id.btn_support);
+        btn_about_us = (Button) findViewById(R.id.btn_about_us);
+        btn_login = (Button) findViewById(R.id.btn_login);
+        btn_home = (Button) findViewById(R.id.btn_home);
+        btn_favorite = (Button) findViewById(R.id.btn_favorite);
+        btn_support = (Button) findViewById(R.id.btn_support);
 
 
-
+        String CurrentDate = JalaliCalendar.gregorianToJalali(new JalaliCalendar.YearMonthDate(2017, 1, 20)).toString();
+        hotel_date.setText(CurrentDate);
 
 
         btn_plus.setOnClickListener(new View.OnClickListener() {
@@ -89,10 +90,9 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
             public void onClick(View v) {
 
 
-                if (night<10)
-                {
+                if (night < 10) {
                     night++;
-                    txt_night_couter.setText(night+"");
+                    txt_night_couter.setText(night + "");
                 }
 
 
@@ -103,10 +103,9 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
             @Override
             public void onClick(View v) {
 
-                if (night>1)
-                {
+                if (night > 1) {
                     night--;
-                    txt_night_couter.setText(night+"");
+                    txt_night_couter.setText(night + "");
                 }
 
 
@@ -114,13 +113,11 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
         });
 
 
-
-
         btn_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), AboutUsActivity.class);
                 startActivity(intent);
             }
         });
@@ -129,7 +126,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -138,7 +135,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -147,7 +144,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),FavoriteActivity.class);
+                Intent intent = new Intent(getApplicationContext(), FavoriteActivity.class);
                 startActivity(intent);
             }
         });
@@ -156,17 +153,16 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),SupportActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SupportActivity.class);
                 startActivity(intent);
             }
         });
 
 
-
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                night=Integer.parseInt(txt_night_couter.getText().toString());
+                night = Integer.parseInt(txt_night_couter.getText().toString());
 
 
                 Intent SearchResultActivity = new Intent(getApplicationContext(), HotelSearchResult.class);
@@ -201,8 +197,6 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
                 dp.show();*/
 
 
-
-
                 PersianCalendar persianCalendar = new PersianCalendar();
                 persianCalendar.setPersianDate(persianCalendar.getPersianYear(),
                         persianCalendar.getPersianMonth(),
@@ -223,9 +217,8 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
         });
 
 
-
-final ProgressDialog progress = ProgressDialog.show(this, "دریافت اطلاعات از سرور",
-        "در حال ارتباط با سرور ، لطفاً شکیبا باشید", true);
+        final ProgressDialog progress = ProgressDialog.show(this, "دریافت اطلاعات از سرور",
+                "در حال ارتباط با سرور ، لطفاً شکیبا باشید", true);
         ServiceApi serviceApi = new ServiceApi(getApplicationContext());
 
         SpinnerCityName = (Spinner) findViewById(R.id.SpinnerCityName);
@@ -276,7 +269,7 @@ final ProgressDialog progress = ProgressDialog.show(this, "دریافت اطلا
 
                 String Text = Txt_CityName.getText().toString() + " ==> " + Txt_CityId.getText().toString();
                 //Toast.makeText(HotelSearch.this, Text, Toast.LENGTH_SHORT).show();
-                CityID=Integer.parseInt(Txt_CityId.getText().toString());
+                CityID = Integer.parseInt(Txt_CityId.getText().toString());
 
             }
 

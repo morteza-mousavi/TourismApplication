@@ -113,8 +113,7 @@
             android:textSize="20sp" />
 
 
-        <include
-            layout="@layout/counter_layout" />
+        <include layout="@layout/counter_layout" />
 
     </LinearLayout>
 

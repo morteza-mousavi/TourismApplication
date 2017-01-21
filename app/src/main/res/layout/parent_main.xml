@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
 
 
     <include
@@ -23,7 +21,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/line"
         android:id="@+id/Line"
-        android:layout_below="@id/header"/>
+        android:layout_below="@id/header" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -41,14 +39,9 @@
             android:id="@+id/menu" />
 
 
-
-            />
+        />
 
     </LinearLayout>
-
-
-
-
 
 
     <include
@@ -61,6 +54,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"/>
+        android:layout_marginTop="2dp" />
 
 </RelativeLayout>

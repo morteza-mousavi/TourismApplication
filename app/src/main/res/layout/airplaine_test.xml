@@ -29,8 +29,6 @@
     </LinearLayout>
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,11 +57,7 @@
             android:id="@+id/twoway" />
 
 
-
     </LinearLayout>
-
-
-
 
 
     <LinearLayout
@@ -81,8 +75,7 @@
         <Spinner
             android:layout_marginLeft="10dp"
             android:layout_width="130dp"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="wrap_content" />
 
 
     </LinearLayout>
@@ -131,7 +124,7 @@
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"/>
+            android:layout_height="30dp" />
 
         <EditText
             android:id="@+id/returndate_etxt"
@@ -141,12 +134,9 @@
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"/>
+            android:layout_height="30dp" />
 
     </LinearLayout>
-
-
-
 
 
     <Button

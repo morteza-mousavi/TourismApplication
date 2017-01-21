@@ -3,9 +3,11 @@
     android:id="@+id/hotel_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:layoutDirection="rtl"
     android:orientation="vertical"
-    android:background="@drawable/back">
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
 
 
     <LinearLayout
@@ -41,22 +43,21 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:text="@string/hotel_city"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
         <Spinner
-            android:layout_margin="5dp"
+            android:paddingBottom="3dp"
             android:id="@+id/SpinnerCityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-
+            android:layout_margin="5dp"
             android:background="@drawable/drop"
             android:spinnerMode="dialog" />
 
@@ -74,21 +75,22 @@
 
 
         <TextView
-            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:text="@string/hotel_date"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
         <TextView
-            android:layout_margin="5dp"
             android:id="@+id/hotel_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:layout_weight="1"
+            android:padding="5dp"
             android:background="@drawable/edit_texts"
             android:gravity="center" />
 
@@ -107,14 +109,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-android:layout_margin="5dp"
+            android:layout_margin="5dp"
             android:text="@string/hotel_night"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
 
-        <include
-            layout="@layout/counter_layout" />
+        <include layout="@layout/counter_layout" />
 
     </LinearLayout>
 
@@ -125,12 +126,12 @@ android:layout_margin="5dp"
 
         <Button
 
-            android:layout_margin="20dp"
             android:id="@+id/search_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
+            android:layout_margin="20dp"
 
             android:background="@drawable/buttons_back"
             android:text="@string/search"

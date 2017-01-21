@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_alignParentTop="true">
-            <!-- android:layout_toRightOf="@+id/Txt_hotelName"-->
+                <!-- android:layout_toRightOf="@+id/Txt_hotelName"-->
 
             </LinearLayout>
 

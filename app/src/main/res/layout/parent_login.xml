@@ -5,8 +5,6 @@
     android:background="@mipmap/background">
 
 
-
-
     <include
 
 
@@ -24,7 +22,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/line"
         android:id="@+id/Line"
-        android:layout_below="@id/header"/>
+        android:layout_below="@id/header" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,19 +30,15 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
-       <!-- <include
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/hotel"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/hotel" />-->
+        <!-- <include
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/hotel"
+             android:layout_centerVertical="true"
+             android:layout_centerHorizontal="true"
+             android:id="@+id/hotel" />-->
 
     </LinearLayout>
-
-
-
-
 
 
     <include
@@ -57,6 +51,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"/>
+        android:layout_marginTop="2dp" />
 
 </RelativeLayout>

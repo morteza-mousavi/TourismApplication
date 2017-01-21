@@ -3,11 +3,7 @@
     <item android:state_pressed="true">
         <layer-list>
             <item>
-                <bitmap android:gravity="fill"
-                    android:src="@drawable/airplane_active"
-                    android:tileMode="disabled"
-                    android:scaleType="fitCenter"
-                    />
+                <bitmap android:gravity="fill" android:src="@drawable/airplane_active" android:tileMode="disabled" android:scaleType="fitCenter" />
             </item>
             <shape android:shape="oval">
 
@@ -18,11 +14,7 @@
     <item android:state_enabled="true">
         <layer-list>
             <item>
-                <bitmap android:gravity="fill"
-                    android:src="@drawable/airplane"
-                    android:tileMode="disabled"
-                    android:scaleType="fitCenter"
-                    />
+                <bitmap android:gravity="fill" android:src="@drawable/airplane" android:tileMode="disabled" android:scaleType="fitCenter" />
             </item>
             <shape android:shape="oval">
 

@@ -2,6 +2,8 @@ package ir.reserveiran.mobile.tourismapplication.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +46,9 @@ public class CityAdapter extends ArrayAdapter<CityResponseModel> {
         TextView TxtCityName = (TextView) item.findViewById(R.id.item_cityName);
         TextView TxtCityId = (TextView) item.findViewById(R.id.item_cityId);
 
+        Typeface Font_BYekan = Typeface.createFromAsset(mContext.getAssets(), "fonts/byekan.ttf");
+        TxtCityName.setTypeface(Font_BYekan);
+
         TxtCityName.setText(listobjects.get(position).getCityName());
         TxtCityId.setText(listobjects.get(position).getCityId()+"");
         return item;
@@ -52,4 +57,6 @@ public class CityAdapter extends ArrayAdapter<CityResponseModel> {
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         return getView(position, convertView, parent);
     }
+
+
 }

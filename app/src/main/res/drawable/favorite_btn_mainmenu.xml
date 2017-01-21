@@ -3,11 +3,7 @@
     <item android:state_pressed="true">
         <layer-list>
             <item>
-                <bitmap android:gravity="fill"
-                    android:src="@drawable/star"
-                    android:tileMode="disabled"
-                    android:scaleType="fitCenter"
-                    />
+                <bitmap android:gravity="fill" android:src="@drawable/star" android:tileMode="disabled" android:scaleType="fitCenter" />
             </item>
 
         </layer-list>
@@ -16,11 +12,7 @@
     <item android:state_enabled="true">
         <layer-list>
             <item>
-                <bitmap android:gravity="fill"
-                    android:src="@drawable/star_activate"
-                    android:tileMode="disabled"
-                    android:scaleType="fitCenter"
-                    />
+                <bitmap android:gravity="fill" android:src="@drawable/star_activate" android:tileMode="disabled" android:scaleType="fitCenter" />
             </item>
 
         </layer-list>

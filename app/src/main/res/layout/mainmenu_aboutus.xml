@@ -15,7 +15,7 @@
 
         <Button
             android:id="@+id/btn_support"
-           android:layout_gravity="center"
+            android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/support_btn_mainmenu" />
@@ -29,7 +29,6 @@
             android:text="@string/MainMenu_Support"
             android:textColor="@color/colorText" />
     </LinearLayout>
-
 
 
     <LinearLayout
