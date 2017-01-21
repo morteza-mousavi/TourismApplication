@@ -80,8 +80,13 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
         btn_favorite = (Button) findViewById(R.id.btn_favorite);
         btn_support = (Button) findViewById(R.id.btn_support);
 
+        Calendar c = Calendar.getInstance();
+        int d = c.get(Calendar.DAY_OF_MONTH)-1;
+        int y = c.get(Calendar.YEAR);
+        int m = c.get(Calendar.MONTH)+1;
 
-        String CurrentDate = JalaliCalendar.gregorianToJalali(new JalaliCalendar.YearMonthDate(2017, 1, 20)).toString();
+
+        String CurrentDate = JalaliCalendar.gregorianToJalali(new JalaliCalendar.YearMonthDate(y, m, d)).toString();
         hotel_date.setText(CurrentDate);
 
 
