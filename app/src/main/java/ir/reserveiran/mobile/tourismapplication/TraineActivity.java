@@ -27,7 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class TraineActivity extends AppCompatActivity {
+public class TraineActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
 
     Spinner SpinnerCityName;
@@ -179,7 +179,7 @@ public class TraineActivity extends AppCompatActivity {
                         persianCalendar.getPersianMonth(),
                         persianCalendar.getPersianDay());
                 DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(
-                        HotelSearch.this,
+                        TraineActivity.this,
                         persianCalendar.getPersianYear(),
                         persianCalendar.getPersianMonth(),
                         persianCalendar.getPersianDay()
@@ -221,7 +221,7 @@ public class TraineActivity extends AppCompatActivity {
                         List<CityResponseModel> cityResponseModelList = responseModelCall.getCityResponse();
 
                         CityAdapter adapter =
-                                new CityAdapter(HotelSearch.this,
+                                new CityAdapter(TraineActivity.this,
                                         R.layout.item_city_row, cityResponseModelList);
                         SpinnerCityName.setAdapter(adapter);
 
@@ -258,6 +258,11 @@ public class TraineActivity extends AppCompatActivity {
         });
 
 
+
+    }
+
+    @Override
+    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
 
     }
 }
