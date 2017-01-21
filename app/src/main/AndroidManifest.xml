@@ -44,7 +44,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
+        <activity android:name=".HotelSearchResult" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".FavoriteActivity" />

@@ -60,8 +60,15 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
 
         Log.e("Date = ", FromDate);
         hotel_date.setText(FromDate);
+    }
 
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_hotel_search);
+        txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
+        hotel_date = (TextView) findViewById(R.id.hotel_date);
+        search_btn = (Button) findViewById(R.id.search_btn);
 
         btn_about_us = (Button)findViewById(R.id.btn_about_us);
         btn_login = (Button)findViewById(R.id.btn_login);
@@ -115,24 +122,6 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
                 startActivity(intent);
             }
         });
-
-
-
-/*        JalaliCalendar.YearMonthDate gdate = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(year, monthOfYear, dayOfMonth));
-
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        Calendar calendar = new GregorianCalendar(gdate.getYear(), gdate.getMonth(), gdate.getDate());
-        Log.e("Calender : ", sdf.format(calendar.getTime()) + "");*/
-
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotel_search);
-        txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
-        hotel_date = (TextView) findViewById(R.id.hotel_date);
-        search_btn = (Button) findViewById(R.id.search_btn);
 
 
 
@@ -197,8 +186,8 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
 
 
 
-final ProgressDialog progress = ProgressDialog.show(this, "dialog title",
-        "dialog message", true);
+final ProgressDialog progress = ProgressDialog.show(this, "دریافت اطلاعات از سرور",
+        "در حال ارتباط با سرور ، لطفاً شکیبا باشید", true);
         ServiceApi serviceApi = new ServiceApi(getApplicationContext());
 
         SpinnerCityName = (Spinner) findViewById(R.id.SpinnerCityName);
@@ -248,8 +237,8 @@ final ProgressDialog progress = ProgressDialog.show(this, "dialog title",
                 TextView Txt_CityId = (TextView) view.findViewById(R.id.item_cityId);
 
                 String Text = Txt_CityName.getText().toString() + " ==> " + Txt_CityId.getText().toString();
-                Toast.makeText(HotelSearch.this, Text, Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(HotelSearch.this, Text, Toast.LENGTH_SHORT).show();
+                CityID=Integer.parseInt(Txt_CityId.getText().toString());
 
             }
 
