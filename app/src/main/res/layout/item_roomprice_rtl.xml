@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/row"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal"
+    android:textDirection="rtl"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:id="@+id/CoRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_RoomTypeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="اتاق دو تخته رو به جنگل" />
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:layout_weight="3"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/txt_sumPriceAVGText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="میانگین یک شب" />
+
+                <TextView
+                    android:id="@+id/txt_rackPriceAVG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_sumPriceAVGText"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="500000 تومان" />
+
+                <TextView
+                    android:id="@+id/txt_SellPriceAVG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_rackPriceAVG"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="300000 تومان" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/txt_sumPriceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="جمع مبلغ قابل پرداخت" />
+
+                <TextView
+                    android:id="@+id/txt_rackPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_sumPriceText"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="2000000 تومان" />
+
+                <TextView
+                    android:id="@+id/txt_SellPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_rackPrice"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="1600000 تومان" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CoLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_roomDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="20% تخفیف" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btnReserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/buttons_back"
+                android:text="رزرو" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_RoomTypeId"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_roomPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="5 امتیاز" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

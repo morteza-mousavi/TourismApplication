@@ -47,10 +47,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="FromCity">شهر مبدا</string>
-    <string name="Arrival_Date">تاریخ حرکت</string>
-    <string name="ToCity">شهر مقصد</string>
-    <string name="Adult">بزرگسال</string>
+    <string name="FromCity">Source City</string>
+    <string name="Arrival_Date">Arrival Date</string>
+    <string name="ToCity">Destination City</string>
+    <string name="Adult">Adults</string>
 
 
 </resources>

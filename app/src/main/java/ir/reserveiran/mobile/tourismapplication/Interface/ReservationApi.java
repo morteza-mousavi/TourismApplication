@@ -4,6 +4,8 @@ import ir.reserveiran.mobile.tourismapplication.Model.CitiesResponseModel;
 import ir.reserveiran.mobile.tourismapplication.Model.FirstParamRequest;
 import ir.reserveiran.mobile.tourismapplication.Model.FirstParamResponse;
 import ir.reserveiran.mobile.tourismapplication.Model.HotelListResponses;
+import ir.reserveiran.mobile.tourismapplication.Model.HotelPriceListResponse;
+import ir.reserveiran.mobile.tourismapplication.Model.HotelPriceRequest;
 import ir.reserveiran.mobile.tourismapplication.Model.HotelRequest;
 import ir.reserveiran.mobile.tourismapplication.Model.HotelResponse;
 import ir.reserveiran.mobile.tourismapplication.Model.TokenRequest;
@@ -25,5 +27,8 @@ public interface ReservationApi {
 
     @POST("Api/GetHotelsInCity")
     Call<HotelListResponses> GetHotelsInCity(@Body HotelRequest hotelRequest);
+
+    @POST("Api/HotelPriceSummery")
+    Call<HotelPriceListResponse> HotelPriceSummery(@Body HotelPriceRequest  hotelPriceRequest);
 
 }

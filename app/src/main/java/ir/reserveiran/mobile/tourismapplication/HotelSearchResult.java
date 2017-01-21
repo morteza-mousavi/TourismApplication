@@ -19,13 +19,15 @@ import ir.reserveiran.mobile.tourismapplication.Model.HotelRequest;
 import ir.reserveiran.mobile.tourismapplication.Model.HotelResponse;
 import ir.reserveiran.mobile.tourismapplication.Utility.ApiKeyManagement;
 import ir.reserveiran.mobile.tourismapplication.Utility.JalaliCalendar;
+import ir.reserveiran.mobile.tourismapplication.Utility.Localization;
 import ir.reserveiran.mobile.tourismapplication.WebService.ServiceApi;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HotelSearchResult extends AppCompatActivity {
-
+public static String FromFaDate;
+    public static int night;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,23 +41,17 @@ public class HotelSearchResult extends AppCompatActivity {
         ServiceApi serviceApi = new ServiceApi(getApplicationContext());
         ApiKeyManagement apiKeyManagement = new ApiKeyManagement(getApplicationContext());
         int CityID = 0;
-        int night = 0;
-        Date FromDate = new Date();
+
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             CityID = extras.getInt("CityID");
-            String FromFaDate = extras.getString("FromFaDate");
+            FromFaDate = extras.getString("FromFaDate");
             night = extras.getInt("night");
-            //The key argument here must match that used in the other activity
-            String[] i = FromFaDate.split("/");
-            JalaliCalendar.YearMonthDate gdate = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(Integer.parseInt(i[0]), Integer.parseInt(i[1]), Integer.parseInt(i[2])));
-            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-            Calendar calendar = new GregorianCalendar(gdate.getYear(), gdate.getMonth(), gdate.getDate());
-            Log.e("Calender : ", sdf.format(calendar.getTime()) + "");
 
-            FromDate = calendar.getTime();
-            Log.e("From Date :::: ", FromDate + "");
         }
+
+        Date FromDate = Localization.ConvertToEnDate(FromFaDate);
 
         HotelRequest hotelRequest = new HotelRequest();
 
@@ -87,7 +83,6 @@ progress.dismiss();
             @Override
             public void onFailure(Call<HotelListResponses> call, Throwable t) {
                 Log.e("On Failure :::>", t.getMessage());
-
             }
         });
 

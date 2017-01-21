@@ -31,36 +31,10 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:src="@mipmap/ic_launcher" />
-        >
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/LinearButtonLeft"
-        android:layout_toRightOf="@+id/LinearImageStar"
-        android:paddingLeft="10dp"
-        android:id="@+id/linearLayout">
-
-        <RelativeLayout
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentTop="true">
-                <!-- android:layout_toRightOf="@+id/Txt_hotelName"-->
-
-            </LinearLayout>
-
-        </RelativeLayout>
 
     </LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/LinearButtonLeft"
@@ -89,26 +63,6 @@
     </LinearLayout>
 
 
-    <Button
-        android:layout_marginLeft="15dp"
-        android:id="@+id/map_location"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/LinearImageStar"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/map_location" />
-
-    <TextView
-        android:paddingRight="2dp"
-        android:paddingLeft="2dp"
-        android:id="@+id/Txt_hotel_address"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="آدرس هتل "
-        android:layout_below="@+id/map_location"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_marginTop="85dp"
         android:layout_marginRight="10dp"
@@ -119,15 +73,6 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:layout_marginTop="35dp"
-        android:layout_marginRight="5dp"
-        android:id="@+id/txt_hotel_discount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="25% تخفیف"
-        android:layout_toStartOf="@+id/LinearButtonLeft" />
-
-    <TextView
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
         android:id="@+id/Txt_hotelName"
@@ -136,5 +81,41 @@
         android:layout_gravity="center"
         android:text="نام هتل"
         android:layout_toStartOf="@+id/LinearButtonLeft" />
+
+    <TextView
+
+        android:id="@+id/txt_hotel_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25% تخفیف"
+        android:layout_alignBottom="@+id/LinearImageStar"
+        android:layout_alignEnd="@+id/Txt_hotelName" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/LinearImageStar"
+        android:layout_alignParentStart="true">
+        <Button
+            android:layout_marginLeft="15dp"
+            android:id="@+id/map_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/LinearImageStar"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/map_location" />
+
+        <TextView
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:id="@+id/Txt_hotel_address"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="آدرس هتل "
+            android:layout_below="@+id/map_location"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
 
 </RelativeLayout>

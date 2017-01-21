@@ -1,16 +1,16 @@
 <resources xmlns:xliff="http://schemas.android.com/tools">
     <string name="app_name">TourismApplication</string>
-    <string name="MainMenu_Support">Support</string>
-    <string name="MainMenu_Singin">Login</string>
-    <string name="MainMenu_MainPage">Home</string>
-    <string name="MainMenu_Favorite">Favorite</string>
-    <string name="MainMenu_AboutUs">About Us</string>
-    <string name="MainMenu_Profile">Profile</string>
-    <string name="Menu_Hotel">Hotel</string>
-    <string name="Menu_Airpalane">Airpalane</string>
-    <string name="Menu_bus">Bus</string>
-    <string name="Menu_Train">Train</string>
-    <string name="Menu_Scenery">Scenery</string>
+    <string name="MainMenu_Support">پشتیبانی</string>
+    <string name="MainMenu_Singin">ورود کاربر</string>
+    <string name="MainMenu_MainPage">خانه</string>
+    <string name="MainMenu_Favorite">علاقه مندی ها</string>
+    <string name="MainMenu_AboutUs">درباره ما</string>
+    <string name="MainMenu_Profile">پروفایل</string>
+    <string name="Menu_Hotel">رزرو هتل</string>
+    <string name="Menu_Airpalane">بلیط پرواز</string>
+    <string name="Menu_bus">رزرو اتوبوس</string>
+    <string name="Menu_Train">رزرو قطار</string>
+    <string name="Menu_Scenery">کچا بریم</string>
     <string name="title_activity_side_menu">side_menu</string>
     <string name="counter_plus">+</string>
     <string name="counter_mines">-</string>
@@ -32,7 +32,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">تنظیمات</string>
     <string name="title_activity_main2">Main2Activity</string>
 
     <!-- TODO: Remove or change this placeholder text -->

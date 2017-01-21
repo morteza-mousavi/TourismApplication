@@ -36,6 +36,7 @@ import ir.reserveiran.mobile.tourismapplication.Model.TokenRequest;
 import ir.reserveiran.mobile.tourismapplication.Utility.ApiKeyManagement;
 import ir.reserveiran.mobile.tourismapplication.Utility.DatePickerDailog;
 import ir.reserveiran.mobile.tourismapplication.Utility.JalaliCalendar;
+import ir.reserveiran.mobile.tourismapplication.Utility.Localization;
 import ir.reserveiran.mobile.tourismapplication.WebService.ServiceApi;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -67,6 +68,8 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_search);
 
+        Localization.SetLocalization(getApplicationContext(),"fa");
+
         txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
         btn_plus = (Button) findViewById(R.id.btn_plus);
         btn_mines = (Button) findViewById(R.id.btn_mines);
@@ -88,6 +91,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
 
         String CurrentDate = JalaliCalendar.gregorianToJalali(new JalaliCalendar.YearMonthDate(y, m, d)).toString();
         hotel_date.setText(CurrentDate);
+        FromDate=CurrentDate;
 
 
         btn_plus.setOnClickListener(new View.OnClickListener() {

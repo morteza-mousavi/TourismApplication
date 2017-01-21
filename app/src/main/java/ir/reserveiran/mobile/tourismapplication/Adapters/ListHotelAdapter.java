@@ -1,7 +1,10 @@
 package ir.reserveiran.mobile.tourismapplication.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +17,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import ir.reserveiran.mobile.tourismapplication.HotelRoomsResult;
+import ir.reserveiran.mobile.tourismapplication.HotelSearchResult;
 import ir.reserveiran.mobile.tourismapplication.Model.HotelResponse;
 import ir.reserveiran.mobile.tourismapplication.R;
 
@@ -53,25 +58,57 @@ public class ListHotelAdapter extends RecyclerView.Adapter<ListHotelAdapter.MyVi
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_hotel_row_test,parent, false);
+                .inflate(R.layout.item_hotel_row_rtl, parent, false);
         return new MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
         HotelResponse h = hotelResponse.get(position);
         holder.Txt_hotelName.setText(h.HotelName);
-        holder.txt_hotel_discount.setText(h.MaxDiscout + "");
-        holder.txt_hotel_start_price_from.setText(h.MinPrice + "");
+
+        Typeface Font_BYekan = Typeface.createFromAsset(mContext.getAssets(), "fonts/byekan.ttf");
+        holder.Txt_hotelName.setTypeface(Font_BYekan, Typeface.BOLD);
+        holder.Txt_hotelName.setTextSize(15);
+
+
+        holder.txt_hotel_discount.setText(h.MaxDiscout + "% تخفیف");
+        holder.txt_hotel_start_price_from.setText(" شروع قیمت از " + h.MinPrice + " تومان ");
         holder.Txt_hotel_address.setText(h.HotelAddress);
 
 
-        holder.txt_hotelId.setText(h.HotelID+"");
+        holder.txt_hotelId.setText(h.HotelID + "");
         String imageUri = "http://www.reserveiran.ir" + h.Pic;
-        Picasso.with(mContext).load(imageUri).into(holder.img_Hotel);
+        Picasso.with(mContext)
+                .load(imageUri)
+                .into(holder.img_Hotel, new com.squareup.picasso.Callback() {
+                    @Override
+                    public void onSuccess() {
+
+                    }
+
+                    @Override
+                    public void onError() {
+                        holder.img_Hotel.setImageResource(R.mipmap.ic_launcher);
+                    }
+                });
 
         holder.hotel_grade.setNumStars(h.HotelGrade);
 
+        holder.btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Log.e("FromFaDate :::>> ", HotelSearchResult.FromFaDate);
+
+                Intent RoomIntent = new Intent(mContext, HotelRoomsResult.class);
+                RoomIntent.putExtra("HotelID",Integer.parseInt(holder.txt_hotelId.getText().toString()));
+                RoomIntent.putExtra("FromFaDate", HotelSearchResult.FromFaDate);
+                RoomIntent.putExtra("night",HotelSearchResult.night);
+
+                mContext.startActivity(RoomIntent);
+            }
+        });
 
     }
 
