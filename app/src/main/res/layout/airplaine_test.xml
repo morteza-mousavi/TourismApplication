@@ -8,164 +8,282 @@
     >
 
 
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/airplane" />
 
-        <TextView
+
+        <LinearLayout
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/Menu_Airpalane"
-            android:textColor="@color/colorText"
-            android:textSize="20sp" />
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/airplane" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/Menu_Airpalane"
+                android:textColor="@color/colorText"
+                android:textSize="20sp" />
+
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-
-        <RadioButton
+        <LinearLayout
             android:layout_weight="1"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/oneway"
-            android:textColor="@color/colorText"
-            android:textSize="20sp"
-            android:id="@+id/oneway" />
-
-
-        <RadioButton
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/twoway"
-            android:textColor="@color/colorText"
-            android:textSize="20sp"
-            android:id="@+id/twoway" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_weight="1"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:background="@drawable/drop"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner" />
-
-        <Spinner
-            android:background="@drawable/drop"
-            android:layout_marginLeft="10dp"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/goon_txt"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/goon"
-            android:textColor="@color/colorText"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/return_txt"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/returndate"
-            android:textColor="@color/colorText"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/goon_etxt"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/edit_texts"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp" />
-
-        <EditText
-            android:id="@+id/returndate_etxt"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/edit_texts"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
-
-        <Button
-
-            android:layout_margin="20dp"
-            android:id="@+id/next_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
 
-            android:background="@drawable/buttons_back"
-            android:text="@string/next"
-            android:textAlignment="center" />
+            <RadioButton
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oneway"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:id="@+id/oneway" />
+
+
+            <RadioButton
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twoway"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:id="@+id/twoway" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:background="@drawable/drop"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner" />
+
+            <Spinner
+                android:background="@drawable/drop"
+                android:layout_marginLeft="10dp"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/goon_txt"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/goon"
+                android:textColor="@color/colorText"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/return_txt"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/returndate"
+                android:textColor="@color/colorText"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/goon_etxt"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edit_texts"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+            <EditText
+                android:id="@+id/returndate_etxt"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edit_texts"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/counter_plus"
+                android:background="@drawable/buttons_back"/>
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_texts"
+                android:text="test" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/counter_plus"
+                android:background="@drawable/buttons_back"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/counter_plus"
+                android:background="@drawable/buttons_back"/>
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_texts"
+                android:text="test" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/counter_plus"
+                android:background="@drawable/buttons_back"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/counter_plus"
+                android:background="@drawable/buttons_back"/>
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_texts"
+                android:text="test" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="@string/counter_plus"
+                android:background="@drawable/buttons_back"/>
+
+        </LinearLayout>
+
+
+
+
+
     </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+
+                android:layout_margin="20dp"
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+
+                android:background="@drawable/buttons_back"
+                android:text="@string/next"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+
+
+
 
 
 </LinearLayout>
