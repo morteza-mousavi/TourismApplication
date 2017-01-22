@@ -31,17 +31,17 @@ public class HotelPriceResponse {
     @Expose
     public String RoomTypeName ;
 
-    @SerializedName("FromDate")
+ /*   @SerializedName("FromDate")
     @Expose
     public Date FromDate ;
-
+*/
     @SerializedName("FromFaDate")
     @Expose
     public String FromFaDate ;
 
-    @SerializedName("ToDate")
+/*    @SerializedName("ToDate")
     @Expose
-    public Date ToDate ;
+    public Date ToDate ;*/
 
     @SerializedName("ToFaDate")
     @Expose
@@ -74,6 +74,12 @@ public class HotelPriceResponse {
     @SerializedName("RackPriceSum")
     @Expose
     public float RackPriceSum ;
+
+    @SerializedName("SellPriceSum")
+    @Expose
+    public float SellPriceSum ;
+
+
 
     public float getSellPriceSum() {
         return SellPriceSum;
@@ -123,6 +129,7 @@ public class HotelPriceResponse {
         RoomTypeName = roomTypeName;
     }
 
+/*
     public Date getFromDate() {
         return FromDate;
     }
@@ -130,6 +137,7 @@ public class HotelPriceResponse {
     public void setFromDate(Date fromDate) {
         FromDate = fromDate;
     }
+*/
 
     public String getFromFaDate() {
         return FromFaDate;
@@ -139,13 +147,13 @@ public class HotelPriceResponse {
         FromFaDate = fromFaDate;
     }
 
-    public Date getToDate() {
+/*    public Date getToDate() {
         return ToDate;
     }
 
     public void setToDate(Date toDate) {
         ToDate = toDate;
-    }
+    }*/
 
     public String getToFaDate() {
         return ToFaDate;
@@ -211,7 +219,4 @@ public class HotelPriceResponse {
         RackPriceSum = rackPriceSum;
     }
 
-    @SerializedName("SellPriceSum")
-    @Expose
-    public float SellPriceSum ;
 }

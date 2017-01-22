@@ -19,9 +19,17 @@ public class HotelPriceRequest {
     @Expose
     public int HotelID ;
 
-    @SerializedName("FromDate")
+    public String getFromFaDate() {
+        return FromFaDate;
+    }
+
+    public void setFromFaDate(String fromFaDate) {
+        FromFaDate = fromFaDate;
+    }
+
+    @SerializedName("FromFaDate")
     @Expose
-    public String FromDate;
+    public String FromFaDate;
 
     @SerializedName("Night")
     @Expose
@@ -56,13 +64,6 @@ public class HotelPriceRequest {
         HotelID = hotelID;
     }
 
-    public String getFromDate() {
-        return FromDate;
-    }
-
-    public void setFromDate(String fromDate) {
-        FromDate = fromDate;
-    }
 
     public int getNight() {
         return Night;
