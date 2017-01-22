@@ -53,11 +53,11 @@ public class HotelRoomsResult extends AppCompatActivity {
             night = extras.getInt("night");
             HotelID=extras.getInt("HotelID");
         }
-        Date FromDate = Localization.ConvertToEnDate(FromFaDate);
+        //Date FromDate = Localization.ConvertToEnDate(FromFaDate);
 
         HotelPriceRequest hotelPriceRequest = new HotelPriceRequest();
         hotelPriceRequest.setCulture("fa");
-        hotelPriceRequest.setFromDate("2017-01-25");
+        hotelPriceRequest.setFromFaDate(FromFaDate);
         hotelPriceRequest.setHotelID(HotelID);
         hotelPriceRequest.setToken(apiKeyManagement.GetApiKey());
         hotelPriceRequest.setNight(night);
@@ -84,7 +84,7 @@ public class HotelRoomsResult extends AppCompatActivity {
             @Override
             public void onFailure(Call<HotelPriceListResponse> call, Throwable t) {
 
-                Log.e("On Failure:::>>",t.getMessage());
+                Log.e("Room Result Failure:>>",t.getMessage());
                 progress.dismiss();
             }
         });

@@ -35,6 +35,7 @@ public class Localization {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         Calendar calendar = new GregorianCalendar(gdate.getYear(), gdate.getMonth(), gdate.getDate());
         Log.e("Calender : ", sdf.format(calendar.getTime()) + "");
+        SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy"); //
 
        Date FromDate = calendar.getTime();
         Log.e("From Date :::: ", FromDate + "");
