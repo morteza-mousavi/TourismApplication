@@ -56,7 +56,8 @@
         <activity android:name=".SceneryActivity" />
         <activity android:name=".TraineActivity" />
         <activity android:name=".EnterActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".HotelRoomsResult"/>
     </application>
 
 </manifest>
