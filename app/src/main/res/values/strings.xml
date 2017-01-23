@@ -30,6 +30,10 @@
     <string name="enter">Enter</string>
     <string name="guest">Guest</string>
     <string name="register">Register</string>
+    <string name="Veteran">Veteran</string>
+    <string name="Compartment">Compartment</string>
+    <string name="Sex">Sex</string>
+
 
     <string name="name">Name</string>
     <string name="family">Family</string>

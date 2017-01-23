@@ -27,36 +27,52 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class TraineActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+public class TraineActivity extends AppCompatActivity{ /*implements DatePickerDialog.OnDateSetListener {*/
 
 
     Spinner SpinnerFromCityName,SpinnerToCityName;
-    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_plus,btn_minus,search_btn;
-    TextView txt_night_couter,hotel_date;
+    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,search_btn,btn_adult_plus,
+            btn_adult_minus,btn_child_plus,btn_child_minus,btn_baby_plus,btn_baby_minus,btn_veteran_plus,btn_veteran_minus;
+
+    TextView txt_adult_value,txt_child_value,txt_baby_value,txt_veteran_value;
 
     int CityID = 21;
     String FromDate ;
-    int night = 1;
+    int Adult = 1;
+    int Child,Baby,Veteran;
 
 
-    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+  /*  public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         FromDate = year + "/" + ((int) monthOfYear + 1) + "/" + dayOfMonth;
 
 
         Log.e("Date = ", FromDate);
         hotel_date.setText(FromDate);
     }
-
+*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traine);
 
-        txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
-        hotel_date = (TextView) findViewById(R.id.hotel_date);
-        btn_plus = (Button)findViewById(R.id.btn_plus);
-        btn_minus = (Button)findViewById(R.id.btn_minus);
+
+
+        btn_adult_plus = (Button)findViewById(R.id.btn_adult_plus);
+        txt_adult_value = (TextView) findViewById(R.id.txt_adult_value);
+        btn_adult_minus = (Button)findViewById(R.id.btn_adult_minus);
+
+        btn_child_plus = (Button)findViewById(R.id.btn_child_plus);
+        txt_child_value = (TextView) findViewById(R.id.txt_child_value);
+        btn_child_minus = (Button)findViewById(R.id.btn_child_minus);
+
+        btn_baby_plus = (Button)findViewById(R.id.btn_baby_plus);
+        txt_baby_value = (TextView) findViewById(R.id.txt_baby_value);
+        btn_baby_minus = (Button)findViewById(R.id.btn_baby_minus);
+
+        btn_veteran_plus = (Button)findViewById(R.id.btn_veteran_plus);
+        txt_veteran_value = (TextView) findViewById(R.id.txt_veteran_value);
+        btn_veteran_minus = (Button)findViewById(R.id.btn_veteran_minus);
 
         btn_about_us = (Button)findViewById(R.id.btn_about_us);
         btn_login = (Button)findViewById(R.id.btn_login);
@@ -67,34 +83,110 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
         search_btn = (Button) findViewById(R.id.search_btn);
 
 
-        btn_plus.setOnClickListener(new View.OnClickListener() {
+
+        btn_adult_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-                if (night<10)
-                {
-                    night++;
-                    txt_night_couter.setText(night+"");
+                if (Adult <5 ){
+                    Adult++;
+                    txt_adult_value.setText(Adult+"");
                 }
-
 
             }
         });
 
-        btn_minus.setOnClickListener(new View.OnClickListener() {
+        btn_adult_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (night>1)
-                {
-                    night--;
-                    txt_night_couter.setText(night+"");
+                if (Adult >0 ){
+                    Adult--;
+                    txt_adult_value.setText(Adult+"");
                 }
-
 
             }
         });
+
+
+        btn_child_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (Child <5 ){
+                    Child++;
+                    txt_child_value.setText(Child+"");
+                }
+
+            }
+        });
+
+        btn_child_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (Child >0 ){
+                    Child--;
+                    txt_child_value.setText(Child+"");
+                }
+
+            }
+        });
+
+
+
+
+        btn_veteran_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (Veteran <5 ){
+                    Veteran++;
+                    txt_veteran_value.setText(Veteran+"");
+                }
+
+            }
+        });
+
+        btn_veteran_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (Veteran >0 ){
+                    Veteran--;
+                    txt_veteran_value.setText(Veteran+"");
+                }
+
+            }
+        });
+
+
+
+
+        btn_baby_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (Baby <5 ){
+                    Baby++;
+                    txt_baby_value.setText(Baby+"");
+                }
+
+            }
+        });
+
+        btn_baby_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (Baby >0 ){
+                    Baby--;
+                    txt_baby_value.setText(Baby+"");
+                }
+
+            }
+        });
+
 
 
 
@@ -159,6 +251,7 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
             }
         });
 
+/*
 
         hotel_date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -221,7 +314,9 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
 
                 }
                 progress.dismiss();
-       /* Log.e("Cities Response Code : ",responseCode+"");*/
+       */
+/* Log.e("Cities Response Code : ",responseCode+"");*//*
+
             }
 
             @Override
@@ -249,6 +344,7 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
             }
         });
 
+
         SpinnerToCityName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -260,7 +356,7 @@ public class TraineActivity extends AppCompatActivity implements DatePickerDialo
 
             }
         });
-
+        */
 
 
     }

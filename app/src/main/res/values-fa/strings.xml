@@ -27,6 +27,11 @@
     <string name="baby">نوزاد</string>
     <string name="next">بعدی</string>
     <string name="back">قبلی</string>
+    <string name="guest">مهمان</string>
+    <string name="register">ثبت نام</string>
+    <string name="Veteran">جانباز</string>
+    <string name="Compartment">کوپه دربست</string>
+    <string name="Sex">جنسیت</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
