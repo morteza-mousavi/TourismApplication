@@ -47,7 +47,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
     Spinner SpinnerCityName;
     JalaliCalendar dateandtime;
     TextView hotel_date, txt_night_couter;
-    Button search_btn, btn_about_us, btn_login, btn_home, btn_favorite, btn_support, btn_plus, btn_mines;
+    Button search_btn, btn_about_us, btn_login, btn_home, btn_favorite, btn_support, btn_plus, btn_minus;
 
     int CityID = 21;
     String FromDate;
@@ -72,7 +72,8 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
 
         txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
         btn_plus = (Button) findViewById(R.id.btn_plus);
-        btn_mines = (Button) findViewById(R.id.btn_mines);
+        btn_minus = (Button) findViewById(R.id.btn_minus);
+
 
         hotel_date = (TextView) findViewById(R.id.hotel_date);
         search_btn = (Button) findViewById(R.id.search_btn);
@@ -108,7 +109,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
             }
         });
 
-        btn_mines.setOnClickListener(new View.OnClickListener() {
+        btn_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

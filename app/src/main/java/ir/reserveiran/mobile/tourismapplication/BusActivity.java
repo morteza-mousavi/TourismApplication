@@ -31,7 +31,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
 
 
     Spinner SpinnerCityName;
-    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_plus,btn_mines,search_btn;
+    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_plus,btn_minus,search_btn;
     TextView txt_night_couter,hotel_date;
 
     int CityID = 21;
@@ -56,7 +56,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
         txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
         hotel_date = (TextView) findViewById(R.id.hotel_date);
         btn_plus = (Button)findViewById(R.id.btn_plus);
-        btn_mines = (Button)findViewById(R.id.btn_mines);
+        btn_minus = (Button)findViewById(R.id.btn_minus);
 
         btn_about_us = (Button)findViewById(R.id.btn_about_us);
         btn_login = (Button)findViewById(R.id.btn_login);
@@ -80,7 +80,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
             }
         });
 
-        btn_mines.setOnClickListener(new View.OnClickListener() {
+        btn_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

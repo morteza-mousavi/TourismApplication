@@ -13,7 +13,7 @@
     <string name="Menu_Scenery">Scenery</string>
     <string name="title_activity_side_menu">side_menu</string>
     <string name="counter_plus">+</string>
-    <string name="counter_mines">-</string>
+    <string name="counter_minus">-</string>
     <string name="hotel_city">City Name</string>
     <string name="hotel_date">Date Entry</string>
     <string name="hotel_night">Night</string>

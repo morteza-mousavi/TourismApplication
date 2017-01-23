@@ -6,12 +6,12 @@
 
 
     <Button
-        android:id="@+id/btn_mines"
+        android:id="@+id/btn_minus"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:background="@drawable/buttons_back"
-        android:text="@string/counter_mines"
+        android:text="@string/counter_minus"
         android:textColor="@android:color/black" />
 
     <TextView

@@ -18,15 +18,15 @@
     <string name="hotel_date">تاریخ ورود</string>
     <string name="hotel_night">تعداد شب اقامت</string>
     <string name="search">شروع جستجو</string>
-    <string name="oneway">One Way</string>
-    <string name="twoway">Tow Way</string>
-    <string name="goon">Go On</string>
-    <string name="returndate">Return Date</string>
-    <string name="adult">Adult</string>
-    <string name="child">Child</string>
-    <string name="baby">Baby</string>
-    <string name="next">Next</string>
-    <string name="back">Back</string>
+    <string name="oneway">رفت</string>
+    <string name="twoway">رفت و برگشت</string>
+    <string name="goon">تاریخ رفت</string>
+    <string name="returndate">تاریخ برگشت</string>
+    <string name="adult">بزرگسال</string>
+    <string name="child">کودک</string>
+    <string name="baby">نوزاد</string>
+    <string name="next">بعدی</string>
+    <string name="back">قبلی</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
