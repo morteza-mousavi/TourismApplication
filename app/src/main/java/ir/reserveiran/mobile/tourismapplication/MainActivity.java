@@ -1,14 +1,21 @@
 package ir.reserveiran.mobile.tourismapplication;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import ir.reserveiran.mobile.tourismapplication.Location.GPSTracker;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     NavigationView Side_menu;
     Button header_manu,header_search,header_alarm,hotel_btn,airplane_btn,scenery_btn,bus_btn,train_btn,btn_about_us,btn_login
            ,btn_home,btn_favorite ,btn_support;
+
+
+
 
 
     @Override
@@ -39,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         btn_home = (Button)findViewById(R.id.btn_home);
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
         btn_support = (Button)findViewById(R.id.btn_support);
+
+
+
+
+
 
 
 
