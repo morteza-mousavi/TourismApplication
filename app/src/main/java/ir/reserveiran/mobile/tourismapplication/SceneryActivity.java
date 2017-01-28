@@ -9,7 +9,7 @@ import android.widget.Button;
 public class SceneryActivity extends AppCompatActivity {
 
 
-    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support;
+    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,Near_btn,City_btn;
 
 
     @Override
@@ -24,6 +24,29 @@ public class SceneryActivity extends AppCompatActivity {
         btn_home = (Button)findViewById(R.id.btn_home);
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
         btn_support = (Button)findViewById(R.id.btn_support);
+
+        Near_btn = (Button)findViewById(R.id.Near_btn);
+        City_btn = (Button)findViewById(R.id.City_btn);
+
+
+
+        Near_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        City_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+              /*  Intent intent = new Intent(getApplicationContext(),AboutUsActivity.class);
+                startActivity(intent);*/
+            }
+        });
 
 
 

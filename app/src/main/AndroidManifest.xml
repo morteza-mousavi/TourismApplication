@@ -83,4 +83,6 @@
             android:value="@integer/google_play_services_version" />
     </application>
 
+    <service android:name=".GPS_Service"/>
+
 </manifest>

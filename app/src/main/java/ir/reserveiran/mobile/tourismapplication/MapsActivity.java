@@ -7,8 +7,10 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -33,6 +35,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        
+
 
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -67,14 +71,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-
-
-
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         /*super.onRequestPermissionsResult(requestCode, permissions, grantResults);*/
-
 
     }
 
@@ -83,8 +82,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        LatLng sydney = new LatLng(-349866767, 151998798);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Me"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
 
