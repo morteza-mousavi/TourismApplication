@@ -88,7 +88,7 @@ public class TraineActivity extends AppCompatActivity{ /*implements DatePickerDi
             @Override
             public void onClick(View v) {
 
-                if (Adult <5 ){
+                if (Adult <6 ){
                     Adult++;
                     txt_adult_value.setText(Adult+"");
                 }
@@ -113,7 +113,7 @@ public class TraineActivity extends AppCompatActivity{ /*implements DatePickerDi
             @Override
             public void onClick(View v) {
 
-                if (Child <5 ){
+                if (Child <6 ){
                     Child++;
                     txt_child_value.setText(Child+"");
                 }
@@ -140,7 +140,7 @@ public class TraineActivity extends AppCompatActivity{ /*implements DatePickerDi
             @Override
             public void onClick(View v) {
 
-                if (Veteran <5 ){
+                if (Veteran <6 ){
                     Veteran++;
                     txt_veteran_value.setText(Veteran+"");
                 }
@@ -167,7 +167,7 @@ public class TraineActivity extends AppCompatActivity{ /*implements DatePickerDi
             @Override
             public void onClick(View v) {
 
-                if (Baby <5 ){
+                if (Baby <6 ){
                     Baby++;
                     txt_baby_value.setText(Baby+"");
                 }

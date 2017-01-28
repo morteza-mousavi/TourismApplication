@@ -3,9 +3,13 @@
     android:id="@+id/hotel_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:layoutDirection="rtl"
     android:orientation="vertical"
-    android:background="@drawable/back">
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
 
 
     <LinearLayout
@@ -20,43 +24,44 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@drawable/bus" />
+            android:background="@drawable/hotel" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/Menu_bus"
+            android:text="@string/Menu_Hotel"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearCitySpinner"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/LinearCellPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/LinearLogo"
-        android:layout_weight="1"
+        android:layout_alignParentTop="true"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:text="@string/hotel_city"
             android:textColor="@color/colorText"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:id="@+id/textView" />
 
         <Spinner
-            android:layout_margin="5dp"
+            android:paddingBottom="3dp"
             android:id="@+id/SpinnerCityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-
+            android:layout_margin="5dp"
             android:background="@drawable/drop"
             android:spinnerMode="dialog" />
 
@@ -74,21 +79,22 @@
 
 
         <TextView
-            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:text="@string/hotel_date"
             android:textColor="@color/colorText"
             android:textSize="20sp" />
 
         <TextView
-            android:layout_margin="5dp"
             android:id="@+id/hotel_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:layout_weight="1"
+            android:padding="10dp"
             android:background="@drawable/edit_texts"
             android:gravity="center" />
 
@@ -124,12 +130,12 @@
 
         <Button
 
-            android:layout_margin="20dp"
             android:id="@+id/search_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
+            android:layout_margin="20dp"
 
             android:background="@drawable/buttons_back"
             android:text="@string/search"

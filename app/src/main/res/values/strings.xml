@@ -33,7 +33,13 @@
     <string name="Veteran">Veteran</string>
     <string name="Compartment">Compartment</string>
     <string name="Sex">Sex</string>
-
+    <string name="State">State</string>
+    <string name="Frome">Frome</string>
+    <string name="To">To</string>
+    <string name="Terminal">Terminal</string>
+    <string name="City">City</string>
+    <string name="date">Date</string>
+    <string name="Count">Count</string>
 
     <string name="name">Name</string>
     <string name="family">Family</string>
@@ -55,6 +61,8 @@
     <string name="Arrival_Date">Arrival Date</string>
     <string name="ToCity">Destination City</string>
     <string name="Adult">Adults</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyBJ8TFPVVMhMo5HlkksRxexoGthfSabYEY</string>
 
 
 </resources>

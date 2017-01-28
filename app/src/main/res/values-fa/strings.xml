@@ -10,7 +10,7 @@
     <string name="Menu_Airpalane">بلیط پرواز</string>
     <string name="Menu_bus">رزرو اتوبوس</string>
     <string name="Menu_Train">رزرو قطار</string>
-    <string name="Menu_Scenery">کچا بریم</string>
+    <string name="Menu_Scenery">کجا بریم</string>
     <string name="title_activity_side_menu">side_menu</string>
     <string name="counter_plus">+</string>
     <string name="counter_mines">-</string>
@@ -32,6 +32,13 @@
     <string name="Veteran">جانباز</string>
     <string name="Compartment">کوپه دربست</string>
     <string name="Sex">جنسیت</string>
+    <string name="State">استان</string>
+    <string name="Frome">مبدا</string>
+    <string name="To">مقصد</string>
+    <string name="Terminal">ترمینال</string>
+    <string name="City">شهرستان</string>
+    <string name="date">تاریخ</string>
+    <string name="Count">تعداد</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

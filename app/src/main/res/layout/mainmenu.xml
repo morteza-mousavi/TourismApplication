@@ -7,13 +7,14 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
-
+        android:background="@drawable/item_menu"
         android:orientation="vertical">
 
         <Button
+            android:layout_marginTop="20dp"
             android:id="@+id/btn_support"
             android:layout_gravity="center"
             android:layout_width="50dp"
@@ -32,14 +33,16 @@
 
 
     <LinearLayout
+        android:background="@drawable/item_menu"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
 
         android:orientation="vertical">
 
         <Button
+            android:layout_marginTop="20dp"
             android:id="@+id/btn_favorite"
             android:layout_gravity="center"
             android:layout_width="50dp"
@@ -56,17 +59,18 @@
 
 
     <LinearLayout
+        android:background="@drawable/item_menu"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
 
-        android:layout_gravity="center"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
 
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_home"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -82,14 +86,16 @@
 
 
     <LinearLayout
+        android:background="@drawable/item_menu"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
 
         android:orientation="vertical">
 
         <Button
+            android:layout_marginTop="20dp"
             android:id="@+id/btn_login"
             android:layout_gravity="center"
             android:layout_width="50dp"
@@ -106,16 +112,16 @@
 
 
     <LinearLayout
-
+        android:background="@drawable/item_menu"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
         android:layout_weight="1"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_about_us"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="50dp"

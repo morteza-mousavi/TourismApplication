@@ -33,7 +33,7 @@ public class Splash extends AppCompatActivity {
 
 
         Configuration configuration = getResources().getConfiguration();
-        configuration.setLayoutDirection(new Locale("fa"));
+        configuration.setLayoutDirection(new Locale("en"));
 
         
         getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());

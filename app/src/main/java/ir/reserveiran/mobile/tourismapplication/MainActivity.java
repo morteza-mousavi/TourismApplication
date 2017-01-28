@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),SceneryActivity.class);
+                Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
                 startActivity(intent);
 
 

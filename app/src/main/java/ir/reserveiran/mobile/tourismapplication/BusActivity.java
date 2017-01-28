@@ -27,25 +27,25 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BusActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+public class BusActivity extends AppCompatActivity{/* implements DatePickerDialog.OnDateSetListener {*/
 
 
     Spinner SpinnerCityName;
-    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_plus,btn_minus,search_btn;
-    TextView txt_night_couter,hotel_date;
+    Button btn_about_us,btn_login,btn_home,btn_favorite ,btn_support,btn_count_plus,btn_count_minus,search_btn;
+    TextView txt_count_value,hotel_date;
 
     int CityID = 21;
     String FromDate ;
-    int night = 1;
+    int Count = 1;
 
 
-    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
+  /*  public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         FromDate = year + "/" + ((int) monthOfYear + 1) + "/" + dayOfMonth;
 
 
         Log.e("Date = ", FromDate);
         hotel_date.setText(FromDate);
-    }
+    }*/
 
 
     @Override
@@ -53,10 +53,10 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus);
 
-        txt_night_couter = (TextView) findViewById(R.id.txt_night_couter);
+        txt_count_value = (TextView) findViewById(R.id.txt_count_value);
         hotel_date = (TextView) findViewById(R.id.hotel_date);
-        btn_plus = (Button)findViewById(R.id.btn_plus);
-        btn_minus = (Button)findViewById(R.id.btn_minus);
+        btn_count_plus = (Button)findViewById(R.id.btn_count_plus);
+        btn_count_minus = (Button)findViewById(R.id.btn_count_minus);
 
         btn_about_us = (Button)findViewById(R.id.btn_about_us);
         btn_login = (Button)findViewById(R.id.btn_login);
@@ -65,29 +65,29 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
         btn_support = (Button)findViewById(R.id.btn_support);
 
         search_btn = (Button) findViewById(R.id.search_btn);
-        btn_plus.setOnClickListener(new View.OnClickListener() {
+        btn_count_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                if (night<10)
+                if (Count<10)
                 {
-                    night++;
-                    txt_night_couter.setText(night+"");
+                    Count++;
+                    txt_count_value.setText(Count+"");
                 }
 
 
             }
         });
 
-        btn_minus.setOnClickListener(new View.OnClickListener() {
+        btn_count_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (night>1)
+                if (Count>1)
                 {
-                    night--;
-                    txt_night_couter.setText(night+"");
+                    Count--;
+                    txt_count_value.setText(Count+"");
                 }
 
 
@@ -141,7 +141,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
             }
         });
 
-        search_btn.setOnClickListener(new View.OnClickListener() {
+      /*  search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 night=Integer.parseInt(txt_night_couter.getText().toString());
@@ -160,7 +160,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
         hotel_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-/*                DatePickerDailog dp = new DatePickerDailog(HotelSearch.this,
+*//*                DatePickerDailog dp = new DatePickerDailog(HotelSearch.this,
                         dateandtime, new DatePickerDailog.DatePickerListner() {
 
                     // @SuppressLint("SimpleDateFormat")
@@ -177,7 +177,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
                         datedialog.dismiss();
                     }
                 });
-                dp.show();*/
+                dp.show();*//*
 
 
 
@@ -237,7 +237,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
 
                 }
                 progress.dismiss();
-       /* Log.e("Cities Response Code : ",responseCode+"");*/
+       *//* Log.e("Cities Response Code : ",responseCode+"");*//*
             }
 
             @Override
@@ -263,7 +263,7 @@ public class BusActivity extends AppCompatActivity implements DatePickerDialog.O
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });
+        });*/
 
 
 
