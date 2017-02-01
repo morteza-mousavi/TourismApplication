@@ -102,6 +102,7 @@ public class ListHotelAdapter extends RecyclerView.Adapter<ListHotelAdapter.MyVi
                 Log.e("FromFaDate :::>> ", HotelSearchResult.FromFaDate);
 
                 Intent RoomIntent = new Intent(mContext, HotelRoomsResult.class);
+                RoomIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 RoomIntent.putExtra("HotelID",Integer.parseInt(holder.txt_hotelId.getText().toString()));
                 RoomIntent.putExtra("FromFaDate", HotelSearchResult.FromFaDate);
                 RoomIntent.putExtra("night",HotelSearchResult.night);
