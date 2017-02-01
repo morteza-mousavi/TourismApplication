@@ -47,7 +47,7 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
     Spinner SpinnerCityName;
     JalaliCalendar dateandtime;
     TextView hotel_date, txt_night_couter;
-    Button search_btn, btn_about_us, btn_login, btn_home, btn_favorite, btn_support, btn_plus, btn_minus;
+    Button    header_main, btn_plus, btn_minus,search_btn;
 
     int CityID = 21;
     String FromDate;
@@ -76,13 +76,10 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
 
 
         hotel_date = (TextView) findViewById(R.id.hotel_date);
+        header_main = (Button) findViewById(R.id.header_main);
         search_btn = (Button) findViewById(R.id.search_btn);
 
-        btn_about_us = (Button) findViewById(R.id.btn_about_us);
-        btn_login = (Button) findViewById(R.id.btn_login);
-        btn_home = (Button) findViewById(R.id.btn_home);
-        btn_favorite = (Button) findViewById(R.id.btn_favorite);
-        btn_support = (Button) findViewById(R.id.btn_support);
+
 
         Calendar c = Calendar.getInstance();
         int d = c.get(Calendar.DAY_OF_MONTH)-1;
@@ -123,47 +120,13 @@ public class HotelSearch extends AppCompatActivity implements DatePickerDialog.O
         });
 
 
-        btn_about_us.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), AboutUsActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_home.setOnClickListener(new View.OnClickListener() {
+        header_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_favorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getApplicationContext(), FavoriteActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_support.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getApplicationContext(), SupportActivity.class);
                 startActivity(intent);
             }
         });

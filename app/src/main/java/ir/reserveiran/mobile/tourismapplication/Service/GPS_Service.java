@@ -15,6 +15,7 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.widget.Toast;
 
 
 /**
@@ -25,6 +26,8 @@ public class GPS_Service extends Service {
 
     private LocationManager locationManager;
     private LocationListener locationListener;
+
+    public double lat,lang;
 
 
 
@@ -48,9 +51,13 @@ public class GPS_Service extends Service {
             public void onLocationChanged(Location location) {
 
                 Intent intent = new Intent("location_updste");
-                intent.putExtra("lang", location.getLongitude());
-                intent.putExtra("lat" ,  location.getLatitude());
+                intent.putExtra("latlang", location.getLongitude() + " , " +  location.getLatitude() );
                 sendBroadcast(intent);
+
+                lat = location.getLatitude();
+                lang = location.getLongitude();
+
+                Toast.makeText(getApplicationContext(), "lat : " + lat + "lang : " + lang , Toast.LENGTH_LONG).show();
 
             }
 

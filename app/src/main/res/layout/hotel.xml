@@ -63,12 +63,10 @@
                     android:id="@+id/textView" />
 
                 <Spinner
-                    android:paddingBottom="3dp"
                     android:id="@+id/SpinnerCityName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:layout_margin="5dp"
                     android:background="@drawable/drop"
                     android:spinnerMode="dialog" />
 

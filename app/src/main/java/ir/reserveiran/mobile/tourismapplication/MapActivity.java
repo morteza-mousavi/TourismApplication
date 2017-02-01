@@ -1,23 +1,33 @@
 package ir.reserveiran.mobile.tourismapplication;
 
+import android.*;
+import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -28,50 +38,16 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import ir.reserveiran.mobile.tourismapplication.Location.GPSTracker;
 import ir.reserveiran.mobile.tourismapplication.Service.GPS_Service;
 
-public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
-
-    double lat, lang;
-
-    private BroadcastReceiver broadcastReceiver;
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if(broadcastReceiver == null)
-        {
-            broadcastReceiver = new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-
-                    lat = (double) intent.getExtras().get("lat");
-                    lang = (double) intent.getExtras().get("lang");
+public class MapActivity extends FragmentActivity {
 
 
-                }
-            };
-
-            registerReceiver(broadcastReceiver,new IntentFilter("location_updste"));
-        }
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if(broadcastReceiver == null)
-        {
-            unregisterReceiver(broadcastReceiver);
-        }
-
-    }
-
+    GoogleMap MaingoogleMap;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,81 +55,75 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_map);
 
 
+        setUpMapIfNeeded();
 
 
-
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-
-        mapFragment.getMapAsync(this);
-
-        if(!runtime_permissions())
-        {
-            enable_permissions();
-        }
-
-
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    private void enable_permissions() {
+    private void setUpMapIfNeeded() {
 
-        Intent intent = new Intent(getApplicationContext(), GPS_Service.class);
-        startService(intent);
+        if (MaingoogleMap == null) {
 
-    }
+            ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(GoogleMap googleMap) {
+                    MaingoogleMap=googleMap;
+                   setUpMap();
+                }
+            });
 
-    private boolean runtime_permissions() {
-
-        if (Build.VERSION.SDK_INT >= 23 && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},100);
-
-            return true;
+/*            if (MaingoogleMap != null) {
+                setUpMap();
+            }*/
         }
 
-        return false;
-
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    private void setUpMap() {
 
-        if(requestCode == 100)
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+
+            Log.d("Permission =>" ,"permission Error");
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        MaingoogleMap.setMyLocationEnabled(true);
+
+       /* LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        String provider = locationManager.getBestProvider(criteria, true);
+        Location myLocation = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria,true));
+        MaingoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        double latitude=0;
+        double longitude=0;
+        if (    myLocation !=null) {
+             latitude = myLocation.getLatitude();
+             longitude = myLocation.getLongitude();
+        }
+        else
         {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED )
-            {
-                enable_permissions();
-            }
-            else
-            {
-                runtime_permissions();
-            }
+            Toast.makeText(this, "Location is null", Toast.LENGTH_LONG).show();
+             latitude=35.56677;
+             longitude= 53.5565656;
         }
-    }
-
-    @Override
-    public void onMapReady(GoogleMap map) {
 
 
-
-
-
-
-        MarkerOptions markerOptions = new MarkerOptions()
-                .position(new LatLng(lat, lang))
-                .title("Me")
-                .snippet("Me")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
-
-        map.addMarker(markerOptions);
-
-        CameraPosition cameraPosition = new CameraPosition.Builder()
-                .zoom(12)
-                .target(new LatLng(lat, lang)).build();
+        LatLng latLng = new LatLng(latitude, longitude);
+        MaingoogleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        MaingoogleMap.animateCamera(CameraUpdateFactory.zoomTo(20));
+        MaingoogleMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("You'r hera!"));*/
 
     }
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
