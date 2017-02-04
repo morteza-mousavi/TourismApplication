@@ -5,13 +5,37 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:orientation="vertical"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+   android:layout_margin="16dp"
+    android:padding="16dp"
+    android:background="@drawable/body_back">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:background="@drawable/reg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"/>
+
+
+    </LinearLayout>
 
 
 
     <LinearLayout
+
+
 
         android:layout_weight="1"
         android:gravity="center"
@@ -20,6 +44,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="horizontal">
+
+
+
+
 
         <TextView
             android:gravity="center"
@@ -43,9 +71,10 @@
 
 
 
+    </LinearLayout>
 
 
-        </LinearLayout>
+
 
 
 

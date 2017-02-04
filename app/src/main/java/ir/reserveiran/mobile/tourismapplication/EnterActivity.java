@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class EnterActivity extends AppCompatActivity {
 
-    Button btn_ir,btn_en,enter_btn,guest_btn,register_btn;
+    Button enter_btn,guest_btn,register_btn;
     EditText txt_user_name,txt_password;
+    RadioButton App_Fa,App_En;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +20,8 @@ public class EnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_enter);
 
 
-        btn_ir =(Button) findViewById(R.id.btn_ir);
-        btn_en =(Button) findViewById(R.id.btn_en);
+        App_Fa =(RadioButton) findViewById(R.id.App_En);
+        App_En =(RadioButton) findViewById(R.id.App_En);
 
         enter_btn =(Button) findViewById(R.id.enter_btn);
         guest_btn =(Button) findViewById(R.id.guest_btn);
@@ -31,19 +33,7 @@ public class EnterActivity extends AppCompatActivity {
 
 
 
-        btn_ir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
-
-        btn_en.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
 
 

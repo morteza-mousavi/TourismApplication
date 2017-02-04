@@ -9,33 +9,63 @@
     android:paddingRight="20dp">
 
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/logo"/>
+
+
     <LinearLayout
-        android:id="@+id/LinearLogo"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_weight="1"
-        android:gravity="center"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
+        <RadioGroup
+            android:orientation="horizontal"
+            android:id="@+id/RadioAppLang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btn_ir"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:background="@drawable/ir_btn" />
 
-        <Button
-            android:id="@+id/btn_en"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:background="@drawable/en_btn" />
+            <RadioButton
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="پارسی"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:id="@+id/App_Fa" />
+
+
+            <RadioButton
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:id="@+id/App_En" />
+
+        </RadioGroup>
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/body_stroke"
+        android:padding="10dp">
+
+
+
 
     <LinearLayout
 
@@ -122,18 +152,7 @@
             android:textAlignment="center" />
 
 
-        <Button
-            android:id="@+id/guest_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
 
-            android:background="@drawable/buttons_back"
-            android:text="@string/guest"
-            android:textAlignment="center" />
 
 
         <Button
@@ -151,5 +170,30 @@
 
 
     </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/guest_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+
+        android:background="@drawable/buttons_back"
+        android:text="@string/guest"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
