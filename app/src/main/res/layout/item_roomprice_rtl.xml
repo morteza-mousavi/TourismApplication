@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="5dp"
-    android:background="@drawable/row"
+    android:background="@drawable/item_hotel_row"
     android:layoutDirection="rtl"
     android:orientation="horizontal"
     android:textDirection="rtl"

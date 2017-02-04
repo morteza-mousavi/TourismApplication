@@ -4,32 +4,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingTop="20dp"
     android:background="@drawable/back">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+</LinearLayout>
 
     <Button
         android:layout_margin="10dp"
         android:id="@+id/Near_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@drawable/buttons_back"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/loction_person_btn_scenery"/>
+
+
+   <!-- <TextView
         android:text="@string/NearME"
-        android:textAlignment="center" />
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+-->
 
 
 
     <Button
         android:layout_margin="10dp"
         android:id="@+id/City_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@drawable/buttons_back"
-        android:text="@string/ByCity"
-        android:textAlignment="center" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/cities_btn_scenery"/>
 
+
+
+   <!-- <TextView
+        android:text="@string/ByCity"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+-->
 
 
 
