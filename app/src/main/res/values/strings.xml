@@ -49,6 +49,7 @@
     <string name="pass">Password</string>
     <string name="NearME">Near Me</string>
     <string name="ByCity">By City</string>
+    <string name="Offer">Offer</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

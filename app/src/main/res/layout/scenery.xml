@@ -16,7 +16,7 @@
     <Button
         android:layout_margin="10dp"
         android:id="@+id/Near_btn"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:textAlignment="center"
@@ -33,29 +33,77 @@
 
 
 
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
     <Button
         android:layout_margin="10dp"
-        android:id="@+id/City_btn"
+        android:id="@+id/Offer_btn"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:background="@drawable/buttons_back"/>
+        android:background="@drawable/offer_btn_scenery"/>
 
 
 
     <TextView
-        android:text="@string/ByCity"
+        android:text="@string/Offer"
         android:layout_gravity="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
 
 
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/City_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/cities_btn_scenery"/>
+
+
+
+            <TextView
+                android:text="@string/ByCity"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
