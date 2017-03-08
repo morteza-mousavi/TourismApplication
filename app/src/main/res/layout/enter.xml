@@ -31,11 +31,13 @@
 
 
             <RadioButton
+
                 android:layout_weight="1"
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="پارسی"
+
                 android:textColor="@color/colorText"
                 android:textSize="20sp"
                 android:id="@+id/App_Fa" />

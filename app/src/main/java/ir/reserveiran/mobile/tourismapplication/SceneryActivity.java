@@ -19,11 +19,11 @@ public class SceneryActivity extends AppCompatActivity {
 
 
 
-        btn_about_us = (Button)findViewById(R.id.btn_about_us);
+/*        btn_about_us = (Button)findViewById(R.id.btn_about_us);
         btn_login = (Button)findViewById(R.id.btn_login);
         btn_home = (Button)findViewById(R.id.btn_home);
         btn_favorite = (Button)findViewById(R.id.btn_favorite);
-        btn_support = (Button)findViewById(R.id.btn_support);
+        btn_support = (Button)findViewById(R.id.btn_support);*/
 
         Near_btn = (Button)findViewById(R.id.Near_btn);
         City_btn = (Button)findViewById(R.id.City_btn);
@@ -50,6 +50,7 @@ public class SceneryActivity extends AppCompatActivity {
 
 
 
+/*
         btn_about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,6 +95,7 @@ public class SceneryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+*/
 
 
 
