@@ -13,7 +13,7 @@
     <string name="Menu_Scenery">کجا بریم</string>
     <string name="title_activity_side_menu">side_menu</string>
     <string name="counter_plus">+</string>
-    <string name="counter_mines">-</string>
+    <string name="counter_minus">-</string>
     <string name="hotel_city">انتخاب شهر</string>
     <string name="hotel_date">تاریخ ورود</string>
     <string name="hotel_night">تعداد شب اقامت</string>
@@ -56,6 +56,19 @@
     <string name="Arrival_Date">تاریخ حرکت</string>
     <string name="ToCity">شهر مقصد</string>
     <string name="Adult">بزرگسال</string>
+
+
+    <string name="enter">ورود</string>
+
+    <string name="name">نام</string>
+    <string name="family">نام خانوادگی</string>
+    <string name="cellphone">شماره همراه</string>
+
+    <string name="user">نام کاربری</string>
+    <string name="pass">رمز عبور</string>
+
+    <string name="title_activity_maps">نقشه</string>
+
 
 
 </resources>

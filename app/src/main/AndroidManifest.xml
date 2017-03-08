@@ -23,8 +23,6 @@
         android:glEsVersion="0x00020000"
         android:required="true" />
 
-    <service android:name=".GPS_Service" />
-
     <application
         android:largeHeap="true"
         android:hardwareAccelerated="false"
@@ -100,6 +98,9 @@
         <activity android:name=".MapActivity" />
         <activity android:name=".RoomTypeActivity" />
         <activity android:name=".RoomRegisterActivity"></activity>
+        <service android:name=".GPS_Service" />
+
+
     </application>
 
 </manifest>

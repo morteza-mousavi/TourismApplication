@@ -140,7 +140,7 @@
                         android:gravity="center"
                         android:background="@drawable/drop"
                         android:layout_width="wrap_content"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:id="@+id/SpinnerFromCityName" />
 
 
@@ -150,7 +150,7 @@
                         android:gravity="center"
                         android:background="@drawable/drop"
                         android:layout_width="wrap_content"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:id="@+id/SpinnerFromState" />
 
 
@@ -221,7 +221,7 @@
                     android:gravity="center"
                     android:background="@drawable/drop"
                     android:layout_width="wrap_content"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:id="@+id/SpinnerToCityName" />
 
                 <Spinner
@@ -231,7 +231,7 @@
                     android:gravity="center"
                     android:background="@drawable/drop"
                     android:layout_width="wrap_content"
-                    android:layout_height="60dp" />
+                    android:layout_height="40dp" />
 
 
             </LinearLayout>

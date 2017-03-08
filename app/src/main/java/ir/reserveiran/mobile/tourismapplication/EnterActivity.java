@@ -2,8 +2,12 @@ package ir.reserveiran.mobile.tourismapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatRadioButton;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +23,7 @@ public class EnterActivity extends AppCompatActivity {
 
     Button enter_btn, guest_btn, register_btn;
     EditText txt_user_name, txt_password;
-    RadioButton App_Fa, App_En;
+    AppCompatRadioButton App_Fa, App_En;
     String SelectedLang;
     RadioGroup RadioAppLang;
 
@@ -30,6 +34,35 @@ public class EnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_enter);
 
         RadioAppLang = (RadioGroup) findViewById(R.id.RadioAppLang);
+
+        App_Fa = (AppCompatRadioButton) findViewById(R.id.App_Fa);
+        App_En = (AppCompatRadioButton) findViewById(R.id.App_En);
+
+        if(Build.VERSION.SDK_INT<=21)
+        {
+
+            ColorStateList colorStateList = new ColorStateList(
+                    new int[][]{
+
+                            new int[]{-android.R.attr.state_enabled}, //disabled
+                            new int[]{android.R.attr.state_enabled} //enabled
+                    },
+                    new int[] {
+
+                            R.color.colorText//disabled
+                            ,R.color.colorText //enabled
+
+                    }
+            );
+
+
+            App_Fa.setButtonTintList(colorStateList);//set the color tint list
+            App_Fa.invalidate(); //could not be necessary
+
+            App_En.setButtonTintList(colorStateList);//set the color tint list
+            App_En.invalidate(); //could not be necessary
+        }
+
 
 /*
         App_Fa =(RadioButton) findViewById(R.id.App_En);
