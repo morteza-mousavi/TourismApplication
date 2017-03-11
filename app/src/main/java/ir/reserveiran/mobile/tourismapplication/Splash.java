@@ -3,8 +3,10 @@ package ir.reserveiran.mobile.tourismapplication;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Handler;
 import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +28,7 @@ import retrofit2.Response;
 
 public class Splash extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +60,8 @@ public class Splash extends AppCompatActivity {
 
         CheckStatusClass statusClass = new CheckStatusClass(getApplicationContext());
         boolean networkConnected = statusClass.isNetworkConnected();
-        if (networkConnected) {
+        boolean hostAvail=statusClass.isHostRechable("http://www.reserveiran.ir");
+        if (networkConnected && hostAvail ) {
             Call<FirstParamResponse> responseCall = serviceApi.reservationApi.GetFirstParams(request);
             responseCall.enqueue(new Callback<FirstParamResponse>() {
                 @Override
@@ -76,6 +80,7 @@ public class Splash extends AppCompatActivity {
                         ApiKeyManagement apiKeyManagement = new ApiKeyManagement(getApplicationContext());
                         apiKeyManagement.SetApiKey(ApiKey);
                     } else {
+
                     }
                 }
 

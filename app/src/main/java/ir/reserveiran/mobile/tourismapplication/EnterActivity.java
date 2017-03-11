@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatRadioButton;
@@ -28,6 +29,7 @@ public class EnterActivity extends AppCompatActivity {
     RadioGroup RadioAppLang;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class EnterActivity extends AppCompatActivity {
         App_Fa = (AppCompatRadioButton) findViewById(R.id.App_Fa);
         App_En = (AppCompatRadioButton) findViewById(R.id.App_En);
 
-        if(Build.VERSION.SDK_INT<=21)
+        if(Build.VERSION.SDK_INT>=21)
         {
 
             ColorStateList colorStateList = new ColorStateList(
@@ -133,6 +135,5 @@ public class EnterActivity extends AppCompatActivity {
         SelectedLang=sh.GetApiKey("SelectLang");
         Log.d("Select Lang =>",SelectedLang);
         super.attachBaseContext(LocaleHelper.onAttach(base,SelectedLang ));
-        //Intent Start = new Intent(base,Splash.class);
     }
 }
