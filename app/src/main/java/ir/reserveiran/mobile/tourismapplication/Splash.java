@@ -60,8 +60,8 @@ public class Splash extends AppCompatActivity {
 
         CheckStatusClass statusClass = new CheckStatusClass(getApplicationContext());
         boolean networkConnected = statusClass.isNetworkConnected();
-        boolean hostAvail=statusClass.isHostRechable("http://www.reserveiran.ir");
-        if (networkConnected && hostAvail ) {
+//        boolean hostAvail=statusClass.isHostRechable("http://www.reserveiran.ir");
+        if (networkConnected  ) {
             Call<FirstParamResponse> responseCall = serviceApi.reservationApi.GetFirstParams(request);
             responseCall.enqueue(new Callback<FirstParamResponse>() {
                 @Override
