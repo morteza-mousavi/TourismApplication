@@ -75,6 +75,7 @@
         <activity android:name=".EnterActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HotelRoomsResult" />
+        <activity android:name=".MapActivityTest" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -85,7 +86,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDI1dh2KGKbfV8x1SfOVzMQPUDvCJ_r7Ok" />
+            android:value="AIzaSyDJNUWA2LOPYExj4iGINCyVYEgXw0oVKZc" />
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
